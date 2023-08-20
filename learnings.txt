@@ -1,5 +1,5 @@
-what is cdn? why do we use cdn?
+what is cdn? why do we use cdn? alternative for cdn? 
 
-what is cross origin? why Im writing crossorigin?
+what is cross origin? why Im writing crossorigin? alternative for cross origin? 
 
 
