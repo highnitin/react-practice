@@ -1,0 +1,5 @@
+what is cdn? why do we use cdn?
+
+what is cross origin? why Im writing crossorigin?
+
+
