@@ -2,4 +2,11 @@ what is cdn? why do we use cdn? alternative for cdn?
 
 what is cross origin? why Im writing crossorigin? alternative for cross origin? 
 
+why there are two links in react cdn? why did react made two files?
+
+read more about props.
+
+change the order of script and see if the code is working properly.
+
+part of react can be used in any application using cdn - read more on it 
 
