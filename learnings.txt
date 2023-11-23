@@ -19,7 +19,7 @@ why script is written under body tag? Can we add it under head?
 
 why there are two links in react cdn? why did react made two files?
 
-what is react element?
+what is react element, explain?
 
 what is production.js file and development.js file in react?
 
