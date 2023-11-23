@@ -24,7 +24,7 @@ Feel free to explore the code, projects, and notes provided in this repository. 
 
 ## Additional Information
 
-For more details about the "Namastey React" course, please refer to the official course materials or visit the course website [here](insert_course_website_link_here).
+For more details about the "Namastey React" course, please refer to the official course materials or visit the course website [here](https://namastedev.com/learn/namaste-react).
 
 ## Connect with Me
 
