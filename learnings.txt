@@ -1,3 +1,7 @@
+------------------------------------------------------------------------------------
+                                 /* Episode 01 */
+------------------------------------------------------------------------------------
+
 - document.createElement("h1") this is a method used to create element in this case h1 is the element
 
 - how browser understand this document? innerHTML? createElement? 
@@ -51,4 +55,6 @@ different between caret and tilde
 what is transitive dependency.
 
 
-
+------------------------------------------------------------------------------------
+                                 /* Episode 02 */
+------------------------------------------------------------------------------------
