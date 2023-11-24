@@ -1,0 +1,26 @@
+{
+  "name": "episode02",
+  "version": "1.0.0",
+  "description": "React app for episode 02",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highnitin/react-practice.git"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "app",
+    "namaste",
+    "react"
+  ],
+  "author": "HighNitin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/highnitin/react-practice/issues"
+  },
+  "homepage": "https://github.com/highnitin/react-practice#readme"
+}
