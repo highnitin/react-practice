@@ -2,9 +2,9 @@
                                  /* Episode 01 */
 ------------------------------------------------------------------------------------
 
-- document.createElement("h1") this is a method used to create element in this case h1 is the element
+document.createElement("h1") this is a method used to create element in this case h1 is the element
 
-- how browser understand this document? innerHTML? createElement? 
+how browser understand this document? innerHTML? createElement? 
 Ans: When you call document.createElement("h1"), you're invoking a method provided by the browser's DOM implementation. Browsers have built-in JavaScript engines (like V8 in Chrome, SpiderMonkey in Firefox, and others) that understand and execute JavaScript code. When this method is called, the browser's JavaScript engine processes it and creates a new <h1> DOM element in memory.
 
 what is cdn? why do we use cdn? alternative for cdn? why there are two files in react?
