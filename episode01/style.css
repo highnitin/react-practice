@@ -5,3 +5,10 @@
     padding: 3px;
     font-weight: 300;
 }
+
+
+.border{
+    border-bottom: 2px solid red;
+    border-top: 2px solid red;
+
+}
