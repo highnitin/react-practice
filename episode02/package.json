@@ -1,8 +1,7 @@
 {
   "name": "episode02",
   "version": "1.0.0",
-  "description": "React app for episode 02",
-  "main": "app.js",
+  "description": "🚀 Learnings - Episode 02 🚀",
   "scripts": {
     "test": "jest"
   },
@@ -12,8 +11,12 @@
   },
   "keywords": [
     "react",
+    "practice",
     "react",
-    "app",
+    "learning",
+    "react",
+    "development",
+    "highnitin",
     "namaste",
     "react"
   ],
@@ -22,5 +25,16 @@
   "bugs": {
     "url": "https://github.com/highnitin/react-practice/issues"
   },
-  "homepage": "https://github.com/highnitin/react-practice#readme"
+  "homepage": "https://github.com/highnitin/react-practice#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist":[
+    "last 5 version"
+  ]
 }

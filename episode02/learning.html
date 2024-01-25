@@ -6,12 +6,107 @@
     <title>🚀 Learnings - Episode 02 🚀</title>
 </head>
 <body style="background-color: black; color: bisque;">
-    <h1>Curious Cat</h1>
+    <h1>Curious Cat - (ignore typos)</h1>
     <ul>
         <li>Package.json is a configuration for npm</li>
+        <li>what is most important pacakge in the react app - it is bundler (research more about it)</li>
         <li>what is bundler? webpack? parcel? vite?</li>
-        <li>job of bundler? bundler basically bundles our app, if packages our app so it can be shipped properly.   </li>
+        <li>what is the job of bundler? bundler basically bundles our app, if packages our app so it can be shipped properly.</li>
         <li>difference between git and github</li>
+        <li>What is production ready code?</li>
+        <li>Bundle files, compress, minify the code, minify the images, remove comments - make your code production ready - what is needed to make your code ready for production?</li>
+        <li>If you want to build a fast production ready app can react itself do it?</li>
+        <li> Ans - to an extent yes react is making our app fast but there are lot of other things we need lot of packages we need to make our app fast.</li>
+        <li>NPM does not stand for - node package manager, behind the scene npm is responsible for managing packages. npm is a standard repository for all the packages. One of the biggest infact. somethings these packages are called as dependencies.</li>
+        <li>package.json is a configuration for npm</li>
+        <li>when we create a create react app the create react app uses webpack behind the sceces.</li>
+        <li>fun fact - if the app is a skeleton and bones then parser will give muscle/strength to the app :)</li>
+        <li>There are 2 types of packages/dependencies that an app can have - 1. Dev Dependencies (generally required in the development phase of the app) 2. Normal Dependencies (used in the production phase of the app)</li>
+        <li>npm install -D parcel : it tell the npm that the app want to install parcel packages/dependencies requirement for development phase (not a normal dependencies)</li>
+        <li>what is caret/tilde ^/~ sign before the version of the package?</li>
+        <li>Ans - In package.json, the tilde (~) allows updates to the patch version of a package, while the caret (^) allows updates to the minor and patch versions of a package. The caret keeps the major version fixed.</li>
+        <li>Learn here - <a  href="https://www.linkedin.com/pulse/difference-bw-tilde-notation-caret-alok-tiwari/" target="_blank">caret vs tilde</a></li>
+        <li>Learn here - </li>
+        <li>Learn here - <a  href="https://www.quora.com/Which-is-better-or-caret-in-package-JSON#:~:text=npm%20allows%20installing%20newer%20version,as%20the%20default%20for%20save%20." target="_blank">caret vs tilde</a></li>
+        <li>If we have  ^ and tomorrow a new minor upgrade is available and we have added caret before the version it will automatically update to the new released minor upgraded version. </li>
+        <li>If we have  ~ and tomorrow a new major upgrade is available and we have added tilde before the version it will automatically update to the new released major upgraded version. </li>
+        <li>what is package-lock.json? is it even needed? what is it? what is the difference between package.json and package-lock.json?</li>
+        <li>package.json - it is a configuration for npm, it keeps a track of what version of package is installed in the app, it helps to keep a approx version of the dependencies.</li>
+        <li>package-lock.json - it keeps a track of exact version that is being installed. it kinda locks the version and keep record of it.</li>
+        <li>what is integrity in the package-lock.json? it is a hash file, but by hash is present?</li>
+        <li>have you heard? it was working on my local but it is not working on production? so to avoid this blunder package-lock.json keeps a hash to verify whatever is there in my dev local machine is same version which is being deployed on the production. it keep a tracks of all the versions of all the dependencies.</li>
+        <li>why do we have node modules folder? it is a kind of database where all our packages exists.</li>
+        <li>our project needs pracel, our project has a dependencies parcel now parcel as a project has it's own dependencies, and those dependencies can have their own dependencies. this is known as transitive dependencies.</li>
+        <li>question - how would npm know that parcel has its own dependencies and those dependencies have their own dependencies?</li>
+        <li></li>
+        <li>question - in our project how many package package.json and package-lock.json files do we have?</li>
+        <li>every dependencies have their own package.json and package-lock.json</li>
+        <li>why the node module folder is bulky? explain with transitive dependencies.</li>
+        <li>should be put node module folder in git repository? - no </li>
+        <li>should be put package.json and package-lock.json in git repository? - yes </li>
+        <li>try deleting the node modules folder and push the code to your repository, and then get the code from repository and then do npm install? you have your answer.</li>
+        <li>just a hack - whatever we can regenerate don't put it on git. it should only have essential files.</li>
+        <li>different between npm and npx? npm in a board way is used to install the packages and npx is used to execute a package, example npx parcel index.html</li>
+        <li>why using a cnd link is not advisable? example - https://unpkg.com/react@18/umd/react.development.js </li>
+        <li>every time the app hits the page where the cdn link is added let's say index.html it does a network call, and this can be expensive and repetitive.</li>
+        <li>just a note - npm i is a shorthand for npm install</li>
+        <li>install react and react dom</li>
+        <li>resolve - @parcel/transformer-js: Browser scripts cannot have imports or exports. - delete .parcel-cache folder.</li>
+        <li>
+            Parcel is responsible for (parcel is such a beast) -
+            <br>
+            - Dev build,
+            <br>
+            - Local server,
+            <br>
+            - HMR - hot module replacement,
+            <br>
+            - File watching algorithm written in c++,
+            <br>
+            - Caching - faster build,
+            <br>
+            - Image Optimisation,
+            <br>
+            - Minification our files,
+            <br>
+            - Bundling,
+            <br>
+            - Compress,
+            <br>
+            - Consistent Hashing,
+            <br>
+            - Code splitting,
+            <br>
+            - Differential Bundling (supports older browers)
+            <br>
+            - Diagonistics
+            <br>
+            - Error Handling
+            <br>
+            - HTTPs (parcel gives a way to host the app on https)
+            <br>
+            - Tree shaing (remove uned code)            
+            <br>
+            - Different development and production bundles             
+            <br>
+            
+            (read more about all these topics above - https://parceljs.org/)
+            <br>
+            
+            Also, just to note parcel is not doing things own its own let's say for image optimisation it might be using some other library or for caching it might be using some other library and so on.
+            <br>
+            
+            Consider the PM as react and the home minister as Parcel and other folder structure as different ministries. (giving you a fun example here)
+        </li>
+        <li>Note - the most expensive thing is your web browser is to load images in your page.</li>
+        <li>Change the entry point in package.json before making the app production ready.</li>
+        <li>make the app production ready - npx parcel build index.html</li>
+        <li>when it builds the production ready app, where does that build goes? ans - dist folder</li>
+        <li>before making your app production ready - make sure it is browser compatible</li>
+        <li>For making browser compatible - check (<a href="https://www.npmjs.com/package/browserslist" target="_blank">npm</a>)</li>
+        <li>For making browser compatible - check (<a href="https://browserslist.dev/" target="_blank">browser list</a>)</li>
+        <li>For making browser compatible - check (<a href="https://github.com/browserslist/browserslist#query-composition" target="_blank">browser list github</a>)</li>
+        <li>Now we will be able to answer - why our react app is fast.</li>
         <li>    </li>
         <li>    </li>
         <li>    </li>
@@ -22,3 +117,4 @@
     </ul>
 </body>
 </html>
+
