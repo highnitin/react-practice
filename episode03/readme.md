@@ -34,7 +34,7 @@ Welcome to the documentation of my learnings from Episode 03 of the NamasteReact
 27. Functional components are nothing but just a JavaScript function that returns some piece of JSX code.
 28. As JSX code is nothing but a React element so
 29. Functional components are nothing but just a JavaScript function that returns a React element or elements.
-30. ```jsx
+30. <!
    // Example 1
    const Function = () => {
        return <h1 class="heading">Hello Developer</h1>
@@ -47,25 +47,24 @@ Welcome to the documentation of my learnings from Episode 03 of the NamasteReact
     const Function = function () {
     return <div><h1 class="heading">Hello Developer</h1></div>
     }
-
+    
 31. Naming convention for functional components starts with a capital letter followed by lowercase. Example - Function1(), Addition(), Header(), and likewise.
-
 32. What is the difference between a React element and a functional component?
 33. What is component composition? Basic idea - adding components inside a component. Composing components into one another is nothing but component composition.
 34. We can write JavaScript inside JSX. If you add {} inside a functional component, the function component will have the superpower and we can write any piece of JavaScript there.
 35. How can we put a React element inside the component? Using {}, {element}
 36. How can we put a React element inside an element? Using {}, {element}
-37. How can we put React components inside the element? Using <></> or using <></> or <></>
+37. How can we put React components inside the element? Using `<></>` or using `<></>` or `<></>`
 39. Naming convention for functional components starts with Capital letter followed by small case. Example - Function1(), Addition(), Header() and likewise.
 40. What is the difference between a React element and a functional component?
 41. What is component composition? Basic idea - adding components inside component. Composing components into one another is nothing but component composition.
-42. We can write JavaScript inside JSX. If you add {} inside functional component, the function component will have the superpower and we can write any piece of javascript there.
+42. We can write JavaScript inside JSX. If you add {} inside functional component, the function component will have the superpower and we can write any piece of JavaScript there.
 43. How can we put react element inside the component. using {}, {element}
 44. How can we put react element inside the element. using {}, {element}
 45. How can we put react components inside the element. using angular </><component/> or using <component></component>
 here are the ways - {HeadingFunction5()}, <HeadingFunction5></HeadingFunction5>, <HeadingFunction5 />
 46. How JSX sanitizes the data? Assume that you had a cross-scripting attack, how JSX handles it? How it prevents cross-scripting attack?
-47. What makes the web app React code readable and faster? Code is readable because we are writing JSX. How to prove this? .Write code where createElement using core React.
+47. What makes the web app React code readable and faster? Code is readable because we are writing JSX. How to prove this? Write code where createElement using core React.
 48. At the end of the day, it is all about JavaScript.
 
 ## Additional Information
