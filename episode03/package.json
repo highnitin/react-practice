@@ -1,0 +1,39 @@
+{
+  "name": "episode03",
+  "version": "1.0.0",
+  "description": "Episode 03 - Laying the foundation in NamasteReact 🚀",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highnitin/react-practice.git"
+  },
+  "keywords": [
+    "Laying",
+    "Foundation",
+    "highnitin",
+    "react",
+    "development",
+    "react",
+    "learning",
+    "namaste",
+    "react"
+  ],
+  "author": "HighNitin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/highnitin/react-practice/issues"
+  },
+  "homepage": "https://github.com/highnitin/react-practice#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

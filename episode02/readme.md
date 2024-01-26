@@ -1,6 +1,6 @@
 # 🚀 NamasteReact Series - Episode 02 Learnings 🚀
 
-Welcome to the documentation of my learnings from Episode 02 of the NamasteReact series. In this episode, we covered a variety of topics related to JavaScript and React. Here's a summary of what I've learned:
+Welcome to the documentation of my learnings from Episode 02 of the NamasteReact series. In this episode, we covered a variety of topics related to JavaScript and React. Here's a summary of what I've learned (ignore typos):
 
 1. Package.json is a configuration for npm
 2. What is the most important package in the React app? It is a bundler (research more about it)

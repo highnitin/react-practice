@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Learnings - Episode 03 🚀</title>
+</head>
+
+<body style="background-color: black; color: bisque;">
+    <h1>Curious Cat - (ignore typos)</h1>
+    <ul>
+        <li>Create a script so you don't have to run npm commands again and again.</li>
+        <li>add script for starting the dev environment and parcel build for push app to production ready code. </li>
+        <li>npm start === npm parcel index.html</li>
+        <li>npm run start === npm parcel index.html</li>
+        <li>npm run build === npx parcel build index.html</li>
+        <li>React.createElement() - what is does? creates an object and when we render this element on to the DOM then
+            it becomes a html element.</li>
+        <li>Fun part - we can build react application without jsx, jsx makes developers life easy.</li>
+        <li>JSX is a convention where we kinda of merge html and js</li>
+        <li> JSX is not html written inside javascript </li>
+        <li> Instead, JSX is a html lookalike or XML lookalike syntax </li>
+        <li>We can create reactElement using core React. We can also create reactElement using JSX.</li>
+        <li>As a programmer and developer, do we write code for machine or humans? Answer is vauge, we write it for
+            both. Human first and then machine second.</li>
+        <li>Can js engine read jsx? No js engine can only understand the code written in javascript.</li>
+        <li>Then how jsx is working? Parcel is responsible. The code we write even before the code reaches to the js
+            engine it is transpiled (transpiled means this code is converted to a code that browser can understand, that
+            react can understand) before it goes to the js engine. and then js engine receives the code the browsers can
+            understand.</li>
+        <li>who is transpiling the code? Parcel is responsible, not working alone it gives the responsibility to the
+            pacakage called babel.</li>
+        <li>Using React </li>
+        <li>React.createElement => ReactElement - JS Object => HTMLElement(render)</li>
+        <li>Using JSX</li>
+        <li> JSX => babel transpiles it to React.createElement => ReactElement - JS Object => HTMLElement(render)</li>
+        <li>Read more on babel and parcel</li>
+        <li>how babel works? babel reads the code token by token, and .. (continue your research)</li>
+        <li>Add to class to the react element created using jsx</li>
+        <li>Attributes are added as a camelcase in jsx example background-color should be written as backgroundColor
+            (please verify)</li>
+        <li>Explore various attributes of various tags.</li>
+        <li>Single line and multiple line in JSX - to write JSX in multiple line wrap the code in (). example.
+            <pre>const heading = (<h1>Hello Developer<h1>) </pre></li>
+        <li>What are react components? - 2 ways of creating react components : class based components, functional
+            components. </li>
+        <li>Functional components are nothing but just a javascript function that returns some piede of jsx code.</li>
+        <li>as jsx code is nothing but a react element so </li>
+        <li>Functional components are nothing but just a javascript function that returns react element or elements.</li>
+        <li><pre>example 1. const Function = () => {return <h1 class="heading">Hello Dveloper</h1>}</pre></li>
+        <li><pre>example 2. const Function = () => {return <div><h1 class="heading">Hello Dveloper</h1></div>}</pre></li>
+        <li><pre>example 3. const Function = function () {return <div><h1 class="heading">Hello Dveloper</h1></div>}</pre> here it must have a return statement.</li>
+        <li>naming convention for functional components starts with Capital letter followed by small case. example -
+            Function1(), Addition(), Header() and likewise.</li>
+        <li>What is the difference between react element and funtional component?</li>
+        <li>What is component composition? basic idea - adding components inside component. Composing components into one another is nothing but component composition. </li>
+        <li>We can write javascript inside jsx. if you add {} inside functional component, the function component will have the superpower and we can write any piece of javascript there.</li>
+        <li>How can we put react element inside the component. using {}, {element}</li>
+        <li>How can we put react element inside the element. using {}, {element}</li>
+        <li>How can we put react components inside the element. using angular </><component/> or using <component></component>
+        here are the ways - {HeadingFunction5()}, <HeadingFunction5></HeadingFunction5>, <HeadingFunction5 />
+        </li>
+        <li>How jsx sanitizes the data? Assume that you had a cross scripting attack, how jsx handles it? how it prevents cross scripting attack?</li>
+        <li>What makes the web app react code readable and faster? code is readable because we are writing JSX. how to proof this? write code where createElement using core react. </li>
+        <li>At the end of the day it is all about javascript.</li>
+        
+    </ul>
+</body>
+
+</html>

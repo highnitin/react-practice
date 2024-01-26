@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: bisque;
+}
+
+.main {
+    border: 2px solid blueviolet;
+    padding: 5px 25px;
+}
+
+.headingCore{
+    border: 2px solid green;
+    padding: 25px 10px;
+}
+
+.heading{
+    border: 2px solid white;
+    padding: 25px 10px;
+}
+
+.container{
+    border: 2px solid red;
+    padding: 25px;
+}
+
