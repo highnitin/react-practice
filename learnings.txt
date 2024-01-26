@@ -2,7 +2,10 @@
                                  /* Episode 01 */
 ------------------------------------------------------------------------------------
 
-Ignore typos
+# 🚀 NamasteReact Series - Episode 01 Learnings 🚀
+
+Welcome to the documentation of my learnings from Episode 01 of the NamasteReact series. In this episode, we covered a variety of topics related to JavaScript and React. Here's a summary of what I've learned (ignore typos):
+
 
 document.createElement("h1") this is a method used to create element in this case h1 is the element
 
@@ -56,18 +59,211 @@ different between caret and tilde
 
 what is transitive dependency.
 
+# 🚀 NamasteReact Series - Episode 01 Learnings - Revised 🚀
+
+1. **Creating Elements with `document.createElement`**
+   - `document.createElement("h1")` is a method used to create an HTML element, in this case, an h1 element.
+
+2. **Understanding Browser's DOM Implementation**
+   - Browsers have built-in JavaScript engines (e.g., V8 in Chrome, SpiderMonkey in Firefox) that process JavaScript code.
+   - `document.createElement` invokes the browser's DOM implementation, creating a new DOM element in memory.
+
+3. **Content Delivery Network (CDN) and React Links**
+   - CDN is used to deliver static assets like JavaScript libraries.
+   - React CDN has two links - one for the core of React and the other for DOM operations.
+
+4. **Cross-Origin and `crossorigin` Attribute**
+   - Explored the concept of cross-origin and the use of `crossorigin` attribute.
+   - Alternative solutions for handling cross-origin scenarios.
+
+5. **Script Order and Placement**
+   - Explored the importance of the order and placement of script tags in HTML.
+   - Experimented with altering the script position to observe the impact on code execution.
+
+6. **React Element and Rendering**
+   - Learned about React elements and how React renders content to the DOM.
+   - Handling scenarios where an element is already present in the DOM.
+
+7. **Understanding React CDN Files**
+   - Explored the purpose of `production.js` and `development.js` files in React.
+
+8. **Usage of Props in React**
+   - Encouraged to read more about props and their role in React components.
+
+9. **NPM and Package Management**
+   - Clarified that NPM doesn't stand for "Node Package Manager."
+   - `package.json` serves as a configuration file for NPM.
+
+10. **Bundlers and Dependency Types**
+    - Introduced to bundlers like Parcel, Webpack, and Wheat.
+    - Discussed the difference between dev dependencies and normal dependencies.
+
+11. **Dependency Versioning with Caret and Tilde**
+    - Explored the difference between caret (`^`) and tilde (`~`) in specifying dependency versions.
+
+12. **Transitive Dependency**
+    - Defined and understood the concept of transitive dependencies in a project.
+
+13. **Injecting Script Files and Log Behavior**
+    - Explored how script files are injected, specifically mentioning adding `app.js` in `index.html`.
+    - Discussed the behavior of logging in JavaScript.
+
 
 ------------------------------------------------------------------------------------
                                  /* Episode 02 */
 ------------------------------------------------------------------------------------
 
 
+# 🚀 NamasteReact Series - Episode 02 Learnings 🚀
 
+Welcome to the documentation of my learnings from Episode 02 of the NamasteReact series. In this episode, we covered a variety of topics related to JavaScript and React. Here's a summary of what I've learned (ignore typos):
+
+1. Package.json is a configuration for npm
+2. What is the most important package in the React app? It is a bundler (research more about it)
+3. What is a bundler? webpack? parcel? vite?
+4. What is the job of a bundler? A bundler bundles our app, packages our app so it can be shipped properly.
+5. Difference between Git and GitHub
+6. What is production-ready code?
+7. Bundle files, compress, minify the code, minify the images, remove comments - make your code production-ready - what is needed to make your code ready for production?
+8. If you want to build a fast production-ready app can React itself do it?
+9. Answer: To an extent, yes, React is making our app fast, but there are a lot of other things and packages we need to make our app fast.
+10. NPM does not stand for - node package manager; behind the scenes, npm is responsible for managing packages. npm is a standard repository for all the packages, sometimes called dependencies.
+11. When we create a Create React App, it uses webpack behind the scenes.
+12. Fun fact - If the app is a skeleton and bones, then the parser will give muscle/strength to the app :)
+13. There are two types of packages/dependencies that an app can have - 1. Dev Dependencies (generally required in the development phase of the app) 2. Normal Dependencies (used in the production phase of the app)
+14. `npm install -D parcel`: It tells npm that the app wants to install parcel packages/dependencies required for the development phase (not normal dependencies)
+15. What is the caret/tilde ^/~ sign before the version of the package?
+16. Answer: In package.json, the tilde (~) allows updates to the patch version of a package, while the caret (^) allows updates to the minor and patch versions of a package. The caret keeps the major version fixed. Learn here - [caret vs tilde](https://www.linkedin.com/pulse/difference-bw-tilde-notation-caret-alok-tiwari/)
+17. Learn here - [caret vs tilde](https://www.quora.com/Which-is-better-or-caret-in-package-JSON#:~:text=npm%20allows%20installing%20newer%20version,as%20the%20default%20for%20save%20.)
+18. If we have ^ and tomorrow a new minor upgrade is available and we have added caret before the version, it will automatically update to the new released minor upgraded version.
+19. If we have ~ and tomorrow a new major upgrade is available and we have added tilde before the version, it will automatically update to the new released major upgraded version.
+20. What is package-lock.json? Is it even needed? What is the difference between package.json and package-lock.json?
+21. package.json - It is a configuration for npm, keeps track of what version of a package is installed in the app, helps to keep an approximate version of the dependencies.
+22. package-lock.json - It keeps track of the exact version that is being installed, locks the version, and keeps a record of it.
+23. What is integrity in the package-lock.json? It is a hash file, but why is a hash present?
+24. Have you heard? It was working on my local but not on production? To avoid this, package-lock.json keeps a hash to verify that whatever is there in my dev local machine is the same version being deployed on the production. It keeps track of all the versions of all the dependencies.
+25. Why do we have a node_modules folder? It is a kind of database where all our packages exist.
+26. Our project needs Parcel; Parcel as a project has its own dependencies, and those dependencies can have their own dependencies. This is known as transitive dependencies.
+27. Question - How would npm know that Parcel has its own dependencies and those dependencies have their own dependencies?
+28. Question - In our project, how many package.json and package-lock.json files do we have?
+29. Every dependency has its own package.json and package-lock.json.
+30. Why is the node_modules folder bulky? Explain with transitive dependencies.
+31. Should we put the node_modules folder in the git repository? - No
+32. Should we put package.json and package-lock.json in the git repository? - Yes
+33. Try deleting the node_modules folder, push the code to your repository, and then get the code from the repository and then do npm install? You have your answer.
+34. Just a hack - Whatever we can regenerate, don't put it on git. It should only have essential files.
+35. Difference between npm and npx? npm, in a broad way, is used to install packages, and npx is used to execute a package, for example, npx parcel index.html
+36. Why using a CDN link is not advisable? Example - https://unpkg.com/react@18/umd/react.development.js
+37. Every time the app hits the page where the CDN link is added, let's say index.html, it does a network call, and this can be expensive and repetitive.
+38. Just a note - `npm i` is a shorthand for `npm install`
+39. Install React and React DOM
+40. Resolve - @parcel/transformer-js: Browser scripts cannot have imports or exports. - Delete .parcel-cache folder.
+41. Parcel is responsible for (parcel is such a beast) -
+    - Dev build,
+    - Local server,
+    - HMR - hot module replacement,
+    - File watching algorithm written in C++,
+    - Caching - faster build,
+    - Image Optimization,
+    - Minification of our files,
+    - Bundling,
+    - Compress,
+    - Consistent Hashing,
+    - Code splitting,
+    - Differential Bundling (supports older browsers)
+    - Diagnostics
+    - Error Handling
+    - HTTPs (parcel gives a way to host the app on https)
+    - Tree shaking (remove unused code)
+    - Different development and production bundles
+    (Read more about all these topics above - [Parcel Documentation](https://parceljs.org/))
+    Also, just to note, Parcel is not doing things on its own. Let's say for image optimization, it might be using some other library, and for caching, it might be using some other library and so on.
+    Consider the PM as React and the home minister as Parcel, and other folder structure as different ministries. (giving you a fun example here)
+42. Note - The most expensive thing is your web browser is to load images on your page.
+43. Change the entry point in package.json before making the app production-ready.
+44. Make the app production-ready - `npx parcel build index.html`
+45. When it builds the production-ready app, where does that build go? Answer - `dist` folder
+46. Before making your app production-ready - make sure it is browser-compatible
+47. For making browser-compatible - check [npm](https://www.npmjs.com/package/browserslist)
+48. For making browser-compatible - check [browser list](https://browserslist.dev/)
+49. For making browser-compatible - check [browser list github](https://github.com/browserslist/browserslist#query-composition)
+50. Now we will be able to answer - why our React app is fast.
 
 
 ------------------------------------------------------------------------------------
                                  /* Episode 03 */
 ------------------------------------------------------------------------------------
+
+
+# 🚀 NamasteReact Series - Episode 03 Learnings 🚀
+
+Welcome to the documentation of my learnings from Episode 03 of the NamasteReact series. In this episode, we covered a variety of topics related to JavaScript and React. Here's a summary of what I've learned (ignore typos):
+
+1. Create a script so you don't have to run npm commands again and again.
+2. Add script for starting the dev environment and parcel build for pushing the app to production-ready code.
+3. `npm start === npm parcel index.html`
+4. `npm run start === npm parcel index.html`
+5. `npm run build === npx parcel build index.html`
+6. `React.createElement()` - what it does? creates an object, and when we render this element onto the DOM, then it becomes an HTML element.
+7. Fun part - we can build a React application without JSX; JSX makes a developer's life easy.
+8. JSX is a convention where we kind of merge HTML and JS.
+9. JSX is not HTML written inside JavaScript.
+10. Instead, JSX is an HTML lookalike or XML lookalike syntax.
+11. We can create a ReactElement using core React. We can also create a ReactElement using JSX.
+12. As a programmer and developer, do we write code for the machine or humans? The answer is vague; we write it for both. Human first and then machine second.
+13. Can the JS engine read JSX? No, the JS engine can only understand the code written in JavaScript.
+14. Then how does JSX work? Parcel is responsible. The code we write, even before it reaches the JS engine, is transpiled (converted to code that the browser can understand, that React can understand) before it goes to the JS engine. and then the JS engine receives the code the browsers can understand.
+15. Who is transpiling the code? Parcel is responsible, not working alone; it gives the responsibility to the package called Babel.
+16. Using React
+17. `React.createElement => ReactElement - JS Object => HTMLElement(render)`
+18. Using JSX
+19. `JSX => Babel transpiles it to React.createElement => ReactElement - JS Object => HTMLElement(render)`
+20. Read more on Babel and Parcel
+21. How Babel works? Babel reads the code token by token, and .. (continue your research)
+22. Add a class to the React element created using JSX
+23. Attributes are added as camelcase in JSX example background-color should be written as backgroundColor (please verify)
+24. Explore various attributes of various tags.
+25. Single line and multiple lines in JSX - to write JSX in multiple lines wrap the code in (). example.
+    ```jsx
+    const heading = (<h1>Hello Developer<h1>)
+    ```
+26. What are React components? - 2 ways of creating React components: class-based components, functional components.
+27. Functional components are nothing but just a JavaScript function that returns some piece of JSX code.
+28. As JSX code is nothing but a React element so
+29. Functional components are nothing but just a JavaScript function that returns a React element or elements.
+30. ```jsx
+   // Example 1
+   const Function = () => {
+       return <h1 class="heading">Hello Developer</h1>
+   }
+    // Example 2
+    const Function = () => {
+    return <div><h1 class="heading">Hello Developer</h1></div>
+    }
+    // Example 3
+    const Function = function () {
+    return <div><h1 class="heading">Hello Developer</h1></div>
+    }
+
+31. Naming convention for functional components starts with a capital letter followed by lowercase. Example - Function1(), Addition(), Header(), and likewise.
+
+32. What is the difference between a React element and a functional component?
+33. What is component composition? Basic idea - adding components inside a component. Composing components into one another is nothing but component composition.
+34. We can write JavaScript inside JSX. If you add {} inside a functional component, the function component will have the superpower and we can write any piece of JavaScript there.
+35. How can we put a React element inside the component? Using {}, {element}
+36. How can we put a React element inside an element? Using {}, {element}
+37. How can we put React components inside the element? Using <></> or using <></> or <></>
+39. Naming convention for functional components starts with Capital letter followed by small case. Example - Function1(), Addition(), Header() and likewise.
+40. What is the difference between a React element and a functional component?
+41. What is component composition? Basic idea - adding components inside component. Composing components into one another is nothing but component composition.
+42. We can write JavaScript inside JSX. If you add {} inside functional component, the function component will have the superpower and we can write any piece of javascript there.
+43. How can we put react element inside the component. using {}, {element}
+44. How can we put react element inside the element. using {}, {element}
+45. How can we put react components inside the element. using angular </><component/> or using <component></component>
+here are the ways - {HeadingFunction5()}, <HeadingFunction5></HeadingFunction5>, <HeadingFunction5 />
+46. How JSX sanitizes the data? Assume that you had a cross-scripting attack, how JSX handles it? How it prevents cross-scripting attack?
+47. What makes the web app React code readable and faster? Code is readable because we are writing JSX. How to prove this? .Write code where createElement using core React.
+48. At the end of the day, it is all about JavaScript.
 
 
 ------------------------------------------------------------------------------------
@@ -114,3 +310,10 @@ what is transitive dependency.
                                  /* Episode 12 */
 ------------------------------------------------------------------------------------
 
+## Additional Information
+
+- [LinkedIn - highnitin](https://linkedin.com/in/highnitin)
+
+Feel free to connect with me on LinkedIn for more discussions and updates on my learning journey!
+
+Happy hacking! 🚀
