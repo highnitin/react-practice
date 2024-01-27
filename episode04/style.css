@@ -22,6 +22,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vh;
 }
 
 
@@ -45,11 +46,12 @@ li {
 .mainSection {
     background-color: bisque;
     border-radius: 4px;
-    padding: 5px 15px;
+    padding: 15px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* height: 80vh; */
 }
 
 .searchSection{
@@ -77,6 +79,7 @@ cursor: not-allowed;
 
 .cardContainer{
     border: none;
+    width: 80vw;
     padding: 15px;
     border-radius: 8px;
     background-color: white;
@@ -87,6 +90,7 @@ cursor: not-allowed;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    /* height: 80vh; */
 }
 
 .card{
@@ -103,6 +107,7 @@ cursor: not-allowed;
     border: 2px solid rgba(128, 128, 128, 0.486);
     background-color: darksalmon;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -149,6 +154,9 @@ font-size: 14px;
 .footerSection{
     text-align: center;
     color: beige;
+}
+footer{
+    /* height: 10vh; */
 }
 
 .footerTextLink{
