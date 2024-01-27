@@ -5,7 +5,7 @@ Welcome to the documentation of my learnings from Episode 04 of the NamasteReact
 ## Food App Low Level Design Idea 
 
 /*
-body
+<body>
     <section id="root">
         <section class="containerSection">
             <header class="headerSection">
@@ -32,13 +32,10 @@ body
                 </section>
             </main>
             <footer class="footerSection">
-            
             </footer>
         </section>
     </section>
-        
-body    
-*/
+</body>    
 
 
 
