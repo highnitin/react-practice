@@ -4,7 +4,7 @@ Welcome to the documentation of my learnings from Episode 04 of the NamasteReact
 
 ## Food App Low Level Design Idea 
 
-/*
+```html
 <body>
     <section id="root">
         <section class="containerSection">
@@ -36,8 +36,7 @@ Welcome to the documentation of my learnings from Episode 04 of the NamasteReact
         </section>
     </section>
 </body>    
-
-
+```
 
 ## Additional Information
 
