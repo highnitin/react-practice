@@ -1,3 +1,14 @@
+Steps to start:
+
+1. npm init 
+2. npm install -D parcel (install development packages for parcel)
+3. npm install react (install react packages)
+4. npm install react-dom (install react dom packages)
+5. import react and react dom in app.js
+6. npm parcel index.html - (write script for hosting project on localhost in package.json) - npm run start
+7. npm parcel build index.html - (write script for pushing app to production in package.json) - npm run build
+
+
 ------------------------------------------------------------------------------------
                                  /* Episode 01 */
 ------------------------------------------------------------------------------------

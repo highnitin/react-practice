@@ -1,0 +1,40 @@
+{
+  "name": "episode04",
+  "version": "1.0.0",
+  "description": "Food app in react",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highnitin/react-practice.git"
+  },
+  "keywords": [
+    "react",
+    "learning",
+    "highnitin",
+    "react",
+    "development",
+    "namaste",
+    "react",
+    "food",
+    "app"
+  ],
+  "author": "HighNitin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/highnitin/react-practice/issues"
+  },
+  "homepage": "https://github.com/highnitin/react-practice#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  }
+}
