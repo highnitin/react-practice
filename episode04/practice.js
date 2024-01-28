@@ -103,19 +103,12 @@ const SearchSection = () => {
 
 // CardImage component
 const CardImage = (props) => {
-	// console.log(props);
-	let imageURL =
-		"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-		props.url;
-	if (props.url === "bjpqvpk8b5mc2fsd9udn") {
-		imageURL =
-			"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vxuyhvsn4fqgsyyzj7tq";
-	}
 	console.log(props.url);
+	url = props.url;
 	return (
 		<img
 			className="cardImg"
-			src={imageURL}
+			src={url}
 			alt="Image Food Dish"
 		/>
 	);
@@ -123,7 +116,6 @@ const CardImage = (props) => {
 
 // CardHeading component
 const CardHeading = (props) => {
-	// console.log(props);
 	return <h2 className="cardHeading">{props.heading}</h2>;
 };
 
@@ -133,7 +125,6 @@ const CardDishName = (props) => {
 
 // CardCuisineList component
 const CardCuisineList = (props) => {
-	// console.log(props);
 	return <h3 className="cardCuisineList">{props.cuisineList}</h3>;
 };
 
@@ -144,85 +135,54 @@ const CardAddress = (props) => {
 
 // components for Featured Section
 const CardPrice = (props) => {
-	// console.log(props);
-	let resultFinal = <h3>{}</h3>;
-	price = props.finalPrice;
-	if (!price || undefined) {
-		price = "Non-Veg";
-		resultFinal = <h3 className="cardPriceNonVeg">{price}</h3>;
-	} else {
-		price = "Veg";
-		resultFinal = <h3 className="cardPriceVeg">{price}</h3>;
-	}
-	return resultFinal;
+	price = props.finalPrice.cardPrice;
+	return <h3 className="cardPrice">{price}</h3>;
 };
 
 const CardRating = (props) => {
-	rating = props.finalRating + "/5.0";
+	rating = props.finalRating.cardRating;
 	return <h3 className="cardRating">{rating}</h3>;
 };
 
 const CardETA = (props) => {
-	eta = props.finalETA;
+	eta = props.finalETA.cardETA;
 	return <h3 className="cardETA">{eta}</h3>;
 };
 
 // FeaturedSection component
 const CardFeatureSection = (props) => {
-	// console.log(props.featureSection.newNpricingDiscount);
 	return (
 		<section className="featureSection">
-			<CardPrice finalPrice={props.featureSection.newNpricingDiscount} />
-			<CardRating finalRating={props.featureSection.newNrating} />
-			<CardETA finalETA={props.featureSection.newNeta} />
+			<CardPrice finalPrice={props.featureSection} />
+			<CardRating finalRating={props.featureSection} />
+			<CardETA finalETA={props.featureSection} />
 		</section>
 	);
 };
 
 // Card Component
-
-// console.log(element.card.card.info.id);
-// const newNid = element.card.card.info.id;
-// console.log(newNid);
-// const newNimage = element.card.card.info.cloudinaryImageId;
-// console.log(newNimage);
-// const newNname = element.card.card.info.name;
-// // const newNpricingDiscount =
-// // 	element.card.card.info.aggregatedDiscountInfoV3.header;
-// const newNrating = element.card.card.info.avgRating;
-// const newNeta = element.card.card.info.sla.slaString;
-// // const newFeature = { newNpricingDiscount, newNrating, newNeta };
-// const newFeature = { newNrating, newNeta };
-
-// <h1>hello</h1>
 const Card = (props) => {
-	const idenfierForResData = props.propsResData.card.card.info;
-	// console.log(idenfierForResData);
-	const newNimage = idenfierForResData.cloudinaryImageId;
-	const newNname = idenfierForResData.name;
-	const newNdishName = idenfierForResData.costForTwo;
-	const newNpricingDiscount = idenfierForResData.veg;
-	const newNrating = idenfierForResData.avgRating;
-	const newNeta = idenfierForResData.sla.slaString;
-	featureArray = { newNpricingDiscount, newNrating, newNeta };
-	const newNcuisines = idenfierForResData.cuisines.join(", ");
-	const newNaddress =
-		idenfierForResData.locality + ", " + idenfierForResData.areaName;
-	// console.log(featureArray);
-	// let arrayForLoop = props.propsResData;
 	return (
-		// arrayForLoop.map((element) => {
 		<section className="card">
-			{<CardImage url={newNimage} />}
-			{<CardHeading heading={newNname} />}
-			{<CardDishName dishName={newNdishName} />}
-			{<CardFeatureSection featureSection={featureArray} />}
-			{<CardCuisineList cuisineList={newNcuisines} />}
-			{<CardAddress address={newNaddress} />}
-			{/* <h1>Hello developers</h1> */}
+			<CardImage url={props.cardImg} />
+			<CardHeading heading={props.cardHeading} />
+			<CardDishName dishName={props.cardDishName} />
+			<CardFeatureSection featureSection={props.cardFeatureSection} />
+			<CardCuisineList cuisineList={props.cardCuisineList} />
+			<CardAddress address={props.cardAddress} />
 		</section>
 	);
 };
+
+// id = card.card.info.id
+// image = card.card.info.cloudinaryImageId
+// name = card.card.info.name
+// dishName = card.card.info.costForTwo
+// pricingDiscount = card.card.info.aggregatedDiscountInfoV3.header
+// rating = card.card.info.avgRating
+// eta = card.card.info.sla.slaString
+// cuisines = card.card.info.cuisines (array)
+// address = card.card.info.locality + card.card.info.areaName
 
 const restaurantData = [
 	{
@@ -1399,15 +1359,129 @@ const restaurantData = [
 	},
 ];
 
-console.log(restaurantData.length);
-
 const CardContainer = () => {
 	return (
 		<section className="cardContainer">
-			{/* <Card propsResData={restaurantData} /> */}
-			{restaurantData.map((element) => (
-				<Card propsResData={element} />
-			))}
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Shree Gajanan Shopee"
+				cardDishName="Alu Puri"
+				cardFeatureSection={{
+					cardPrice: "$99",
+					cardRating: "5.0/5.0",
+					cardETA: "40 mins",
+				}}
+				cardCuisineList="Indian, Lazzizz, Khana"
+				cardAddress="Pune, MH, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Ramson's Sweet"
+				cardDishName="Dahi Samosa Chat"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "4.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Chinese, Italian"
+				cardAddress="Nagpur, MH, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Rameshwaram"
+				cardDishName="Puliogiri"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "3.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Mexican"
+				cardAddress="Bangalore, KA, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Ramson's Sweet"
+				cardDishName="Dahi Samosa Chat"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "4.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Chinese, Italian"
+				cardAddress="Nagpur, MH, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Rameshwaram"
+				cardDishName="Puliogiri"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "3.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Mexican"
+				cardAddress="Bangalore, KA, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Ramson's Sweet"
+				cardDishName="Dahi Samosa Chat"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "4.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Chinese, Italian"
+				cardAddress="Nagpur, MH, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Rameshwaram"
+				cardDishName="Puliogiri"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "3.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Mexican"
+				cardAddress="Bangalore, KA, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Ramson's Sweet"
+				cardDishName="Dahi Samosa Chat"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "4.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Chinese, Italian"
+				cardAddress="Nagpur, MH, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Rameshwaram"
+				cardDishName="Puliogiri"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "3.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Mexican"
+				cardAddress="Bangalore, KA, India"
+			/>
+			<Card
+				cardImg="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/p2cp5ldx1kpzlaq2iuvn"
+				cardHeading="Ramson's Sweet"
+				cardDishName="Dahi Samosa Chat"
+				cardFeatureSection={{
+					cardPrice: "$199",
+					cardRating: "4.0/5.0",
+					cardETA: "10 mins",
+				}}
+				cardCuisineList="Indian, Chinese, Italian"
+				cardAddress="Nagpur, MH, India"
+			/>
 		</section>
 	);
 };

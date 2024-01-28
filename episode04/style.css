@@ -3,8 +3,6 @@ body{
     /* color: bisque; */
     /* font-family: "Honk", system-ui; */
     font-family: "Karla", sans-serif;
-
-
 }
 
 .containerSection{
@@ -99,8 +97,11 @@ cursor: not-allowed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     margin: 15px;
     padding: 15px;
+    width: 250px;
+    height: 400px;
 }
 
 .card:hover{
@@ -122,6 +123,7 @@ cursor: not-allowed;
 .cardHeading {
     font-size: 20px;
     margin: 10px 0 0 0;
+    color: rgb(0, 217, 255);
 }
 
 .cardDishName{
@@ -129,8 +131,23 @@ margin: 5px 0px 0px 0;
 font-size: 14px;
 }
 
-.cartPrice, .cartRating, .cartETA {
-    margin: 0px;
+.cardETA {
+    /* margin: 0px; */
+    /* color: aqua; */
+}
+.cardRating  {
+    /* margin: 0px; */
+    color: green;
+}
+
+.cardPriceVeg {
+    /* margin: 0px; */
+    color: green;
+}
+
+.cardPriceNonVeg {
+    /* margin: 0px; */
+    color: red;
 }
 
 .cardCuisineList
@@ -143,12 +160,14 @@ font-size: 14px;
 {
     margin: 5px 0 0 0;
     font-size: 14px;
+    color: chocolate;
 }
 
 
 .cardImg{
     border-radius: 8px;
-    width: 200px;
+    width: 100%;
+    height: 200px;
 }
 
 .footerSection{
