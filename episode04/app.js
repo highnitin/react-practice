@@ -111,7 +111,7 @@ const CardImage = (props) => {
 		imageURL =
 			"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vxuyhvsn4fqgsyyzj7tq";
 	}
-	console.log(props.url);
+	// console.log(props.url);
 	return (
 		<img
 			className="cardImg"
@@ -197,7 +197,14 @@ const CardFeatureSection = (props) => {
 // <h1>hello</h1>
 const Card = (props) => {
 	const idenfierForResData = props.propsResData.card.card.info;
+
+	// use destructing of the object with option chaining figure out how it is done.
+	// const { cloudinaryImageId, name, costForTwo, cuisines } =
+	// props.propsResData.card.card.info;
+	// const { cloudinaryImageId, name, costForTwo, cuisines } =
+	// props?.propsResData.card.card.info;
 	// console.log(idenfierForResData);
+
 	const newNimage = idenfierForResData.cloudinaryImageId;
 	const newNname = idenfierForResData.name;
 	const newNdishName = idenfierForResData.costForTwo;
@@ -1399,14 +1406,22 @@ const restaurantData = [
 	},
 ];
 
-console.log(restaurantData.length);
+// console.log(restaurantData.length);
 
 const CardContainer = () => {
+	// const uniqueKeyID = restaurantData;
+	// creating unique id for avoiding warning in console.
+	const uniqueKeyID = restaurantData[0].card.card.info.id;
+	// console.log(uniqueKeyID);
 	return (
 		<section className="cardContainer">
 			{/* <Card propsResData={restaurantData} /> */}
-			{restaurantData.map((element) => (
-				<Card propsResData={element} />
+			{restaurantData.map((element, index) => (
+				<Card
+					// propsResData={element}
+					key={index + "resAPP" + uniqueKeyID}
+					propsResData={element}
+				/>
 			))}
 		</section>
 	);

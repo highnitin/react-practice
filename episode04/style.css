@@ -102,6 +102,7 @@ cursor: not-allowed;
     padding: 15px;
     width: 250px;
     height: 400px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card:hover{
@@ -109,8 +110,13 @@ cursor: not-allowed;
     background-color: darksalmon;
     color: white;
     cursor: pointer;
+    transform: scale(1.08);
+
 }
 
+.card:hover-out {
+    transform: scale(1);
+}
 
 .featureSection{
     display: flex;
@@ -126,18 +132,28 @@ cursor: not-allowed;
     color: rgb(0, 217, 255);
 }
 
+.card:hover .cardHeading    {
+    color: black
+}
+
 .cardDishName{
-margin: 5px 0px 0px 0;
-font-size: 14px;
+    margin: 5px 0px 0px 0;
+    font-size: 14px;
 }
 
 .cardETA {
     /* margin: 0px; */
     /* color: aqua; */
 }
+.card:hover .cardETA    {
+    color: green;
+}
 .cardRating  {
     /* margin: 0px; */
     color: green;
+}
+.card:hover .cardRating    {
+    color: wheat;
 }
 
 .cardPriceVeg {
@@ -156,6 +172,10 @@ font-size: 14px;
     font-size: 14px;
 }
 
+.card:hover .cardCuisineList    {
+    color: black;
+}
+
 .cardAddress
 {
     margin: 5px 0 0 0;
@@ -163,11 +183,22 @@ font-size: 14px;
     color: chocolate;
 }
 
+.card:hover .cardAddress    {
+    color: bisque;
+}
+
+.card:hover .cardCuisineList    {
+    color: black;
+}
 
 .cardImg{
     border-radius: 8px;
     width: 100%;
     height: 200px;
+}
+
+.cardImg:hover{
+
 }
 
 .footerSection{
