@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>🚀 Learnings - Episode 05 🚀</title>
+	</head>
+
+	<body style="background-color: black; color: bisque">
+		<h1>Curious Cat - (ignore typos)</h1>
+		<ul>
+			<li>
+				Before we start coding, make a conceptual design of your application. or
+				a wire frame.
+			</li>
+			<li>Make a low level design of working of your application.</li>
+			<li>Start working with React Props</li>
+			<li>Props are just normal arguments to the function.</li>
+			<li>
+				Passing arguments to the function is same as passing props to the
+				functional components.
+			</li>
+			<li>How can we ready the props?</li>
+			<li>
+				When we want to dynamically pass some data to the components we pass in
+				as a props.
+			</li>
+			<li>How to pass dynamic data?</li>
+			<li>What is Config driven UI</li>
+			<li>
+				All the ui is driven by a config what is the config? the data, api is
+				the config. Example, swiggy have offer for delhi, mumbai, nagpur, etc.
+				or some place there is no offer. So do we need to build different ui for
+				all the location? No. Let's consider a carousel which shows offers from
+				different city, we have written ui once, and now according to the data
+				coming from the backend ui is getting changed. this is called config
+				driven ui. another example if we want to show different color in
+				festival in particular city, we just need to update the backend data,
+				and then config will drive the ui.
+			</li>
+			<li>
+				In any react application, there is a ui layer and data layer and both of
+				them together builds a frontend application. UI layer engineer, data
+				layer engineer
+			</li>
+			<li>Why do we have warning as each list must have a unique key?</li>
+			<li>Never use react index as keys</li>
+			<li>
+				Solve the warning - Warning: Each child in a list should have a unique
+				"key" prop.
+			</li>
+			<li>
+				Whenever react renders any element, let's in the code we have written to
+				add the new element in the first place of the node. If the key is not
+				mentioned then react will render all the nodes as react will think as
+				these are newly added. if we add keys to the child in the list, react
+				will check okay these keys were already present before and we have a new
+				key example "124" so now it is clear that the next key doesn't exist so
+				react will add the child element and will not render the rest of the
+				existing child elements.
+				<pre>
+				   O (root element)
+				/  |  \
+				0  0   0
+			   /  /|\  /\
+			  O  O O O O O
+				</pre
+				>
+				SO if the element is added in the first place react will render all the
+				nodes, to avoid that and let react know that these nodes exist we use
+				unique key for each child list.
+			</li>
+			<li>
+				Make sure you are commenting out and cleaning your code before pushing
+				it to production
+			</li>
+			<li>
+				Always deconstruct the props to make to code cleaner and easily
+				readable.
+			</li>
+			<li>Props are nothing but objects.</li>
+			<li>What is optional chaining in javascrip?</li>
+			<li>
+				<pre>
+					when we loop over a container,
+
+ o (container )
+/|\
+ooo (restaurant card)
+id1 id2 id3
+
+let say we have 3 res cards and suppose there is a new res card added in the list, if you dont give the ids, and a new card came in react will re render all these card as react cannot uniquely identify which is new card.
+
+react cleans the container and re renders all these cards. it will treat all the restro card as same.
+
+if we give them an unique id with id1, id2, id3 and so on, and element with xyzid is added then react will know id 1,2,3 were already there so react will only render xyzid not all.
+
+Suppose we have infinte scrolls so now imagine the optimisation part if key is not present.
+
+It take a big performance hit if the key is not added. so to avoid it we use keys.
+
+Don't use indexkey of an array as a key as it is not suggested in react documentation.
+
+Read more on react doc and Pokorny's article for in-depth explanation on the negative impacts of using an index as a key.
+
+not using keys (not acceptable) << index as key << unique key
+ 
+				</pre
+				>
+			</li>
+			<li>Work on assignments</li>
+		</ul>
+	</body>
+</html>
