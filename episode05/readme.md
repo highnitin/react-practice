@@ -16,7 +16,7 @@ Welcome to the documentation of my learnings from Episode 05 of the NamasteReact
             </header>
             <main class="mainSection">
                 <section className = "searchSection">
-                    <input> Search Input Box </input>
+                    <input> Search Input Box
                     <button> Search </button>
                 </section>
                 <section className = "cardContainer">

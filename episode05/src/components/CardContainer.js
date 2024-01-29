@@ -1,11 +1,12 @@
-import restaurantData from "../utils/demoData";
+import React from "react";
 import Card from "./Card";
 
-const CardContainer = () => {
-	const uniqueKeyID = restaurantData[0].card.card.info.id;
+const CardContainer = ({ newRestaurantData }) => {
+	const uniqueKeyID = newRestaurantData[0]?.card.card.info.id || "";
+
 	return (
 		<section className="cardContainer">
-			{restaurantData.map((element, index) => (
+			{newRestaurantData.map((element, index) => (
 				<Card
 					key={index + "resAPP" + uniqueKeyID}
 					propsResData={element}

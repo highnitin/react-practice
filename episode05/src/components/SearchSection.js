@@ -1,4 +1,15 @@
-const SearchSection = () => {
+import { useState } from "react";
+import restaurantData from "../utils/demoData";
+
+const SearchSection = ({ onFilter }) => {
+	const handleFilterClick = () => {
+		const filteredData = restaurantData.filter(
+			(res) => res.card.card.info.avgRating > 4.3
+		);
+		console.log(filteredData); // Step 3: Log filtered data to console
+		onFilter(filteredData); // Step 4: Pass filteredData to onFilter callback
+	};
+
 	return (
 		<section className="searchSection">
 			<form
@@ -17,6 +28,12 @@ const SearchSection = () => {
 					disabled
 				/>
 			</form>
+			<button
+				className="filterButtonSection"
+				onClick={handleFilterClick} // Step 2: Handle click event
+			>
+				Filter the fukng best
+			</button>
 		</section>
 	);
 };
