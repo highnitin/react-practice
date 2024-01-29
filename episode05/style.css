@@ -130,7 +130,7 @@ cursor: not-allowed;
     color: black
 }
 
-.cardDishName{
+.cardPriceForTwo{
     margin: 5px 0px 0px 0;
     font-size: 14px;
 }
@@ -185,10 +185,6 @@ cursor: not-allowed;
     border-radius: 8px;
     width: 100%;
     height: 200px;
-}
-
-.cardImg:hover{
-
 }
 
 .footerSection{

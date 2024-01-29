@@ -2,7 +2,7 @@
   "name": "episode04",
   "version": "1.0.0",
   "description": "Food app in react",
-  "main": "app.js",
+  "main": "./src/components/App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
