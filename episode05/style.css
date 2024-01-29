@@ -51,10 +51,11 @@ li {
 
 .searchSection{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px 0px;
-    gap: 50px;
+    /* margin: 20px; */
+    gap: 30px;
 }
 
 .formSection {

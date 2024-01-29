@@ -10,6 +10,14 @@ const SearchSection = ({ onFilter }) => {
 		onFilter(filteredData); // Step 4: Pass filteredData to onFilter callback
 	};
 
+	const handleFilterClear = () => {
+		const filteredData = restaurantData.filter(
+			(res) => res.card.card.info.avgRating
+		);
+		console.log(filteredData); // Step 3: Log filtered data to console
+		onFilter(filteredData); // Step 4: Pass filteredData to onFilter callback
+	};
+
 	return (
 		<section className="searchSection">
 			<form
@@ -33,6 +41,13 @@ const SearchSection = ({ onFilter }) => {
 				onClick={handleFilterClick} // Step 2: Handle click event
 			>
 				Filter the fukng best
+			</button>
+
+			<button
+				className="filterButtonSection"
+				onClick={handleFilterClear} // Step 2: Handle clear click event (Add on)
+			>
+				Clear Filter
 			</button>
 		</section>
 	);
