@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SearchSection from "./SearchSection";
 import CardContainer from "./CardContainer";
 import restaurantData from "../utils/demoData";
 
 const Main = () => {
-	const [filteredData, setFilteredData] = useState(null); // Step 6: Use useState
+	const [filteredData, setNewRestaurantData] = useState(restaurantData);
 
 	const handleFilter = (data) => {
-		setFilteredData(data); // Step 5: Update filteredData state
+		setNewRestaurantData(data);
 	};
 
 	return (
 		<main className="mainSection">
-			<SearchSection onFilter={handleFilter} />{" "}
+			<SearchSection onFilter={handleFilter} />
 			{/* Step 1: Pass onFilter callback */}
 			<CardContainer
-				newRestaurantData={filteredData || restaurantData} // Step 5: Pass filteredData to CardContainer
+				newRestaurantData={filteredData || restaurantData}
+				// Step 5: Pass filteredData to CardContainer
 			/>
 		</main>
 	);

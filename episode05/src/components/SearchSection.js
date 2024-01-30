@@ -1,21 +1,16 @@
-import { useState } from "react";
 import restaurantData from "../utils/demoData";
 
 const SearchSection = ({ onFilter }) => {
-	const handleFilterClick = () => {
+	const filterButtonSectionEvent = () => {
 		const filteredData = restaurantData.filter(
-			(res) => res.card.card.info.avgRating > 4.3
+			(res) => res.card.card.info.avgRating >= 4.4
 		);
-		console.log(filteredData); // Step 3: Log filtered data to console
-		onFilter(filteredData); // Step 4: Pass filteredData to onFilter callback
+		onFilter(filteredData);
 	};
 
-	const handleFilterClear = () => {
-		const filteredData = restaurantData.filter(
-			(res) => res.card.card.info.avgRating
-		);
-		console.log(filteredData); // Step 3: Log filtered data to console
-		onFilter(filteredData); // Step 4: Pass filteredData to onFilter callback
+	const ClearButtonSectionEvent = () => {
+		const filteredData = restaurantData.filter((res) => res.card.card.info);
+		onFilter(filteredData);
 	};
 
 	return (
@@ -38,14 +33,15 @@ const SearchSection = ({ onFilter }) => {
 			</form>
 			<button
 				className="filterButtonSection"
-				onClick={handleFilterClick} // Step 2: Handle click event
-			>
+				// Step 2: Handle click event
+				onClick={filterButtonSectionEvent}>
 				Filter the fukng best
 			</button>
 
 			<button
 				className="filterButtonSection"
-				onClick={handleFilterClear} // Step 2: Handle clear click event (Add on)
+				onClick={ClearButtonSectionEvent}
+				// Step 2: Handle clear click event (Add on)
 			>
 				Clear Filter
 			</button>

@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import restaurantData from "../utils/demoData";
 
 const CardContainer = ({ newRestaurantData }) => {
 	const uniqueKeyID = newRestaurantData[0]?.card.card.info.id || "";
