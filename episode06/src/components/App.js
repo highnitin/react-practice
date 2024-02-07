@@ -9,7 +9,6 @@ const App = () => {
 	return (
 		<section className="containerSection">
 			<Header />
-			{/* <Demo /> */}
 			<Main />
 			<Footer />
 		</section>

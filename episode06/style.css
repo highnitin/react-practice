@@ -4,13 +4,25 @@ body{
     font-family: "Karla", sans-serif;
 }
 
+/* h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h3{
+    font-size: 18px;
+} */
+
 .containerSection{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.headerSection {
+.headerSection { 
     background-color: bisque;
     border: 2px solid white;
     border-radius: 4px;
@@ -104,7 +116,8 @@ cursor: not-allowed;
     margin: 15px;
     padding: 15px;
     width: 250px;
-    height: 400px;
+    /* height: fit-content; */
+    min-height: max-content;
     transition: transform 0.3s ease-in-out;
 }
 

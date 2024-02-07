@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>🚀 Learnings - Episode 06 🚀</title>
+	</head>
+
+	<body style="background-color: black; color: bisque">
+		<h1>Curious Cat - (ignore typos)</h1>
+		<ul>
+			<li>
+				<pre>
+				Monolith vs Microservices
+
+Monolith
+Example of a company where every thing is authentication, api, ui service, backend service, database services, sms sending etc written in the same services.
+Drawback - if we want to do a small change again we need to compile the bulky code and do the task.
+
+
+Microservices
+
+All small services combine together forms a big application
+
+micro services talk to each other 
+depending upon the use case.
+
+having separate services for each thing example backend services, ui services, authentication services, database services, sms services, email services. this is know as separation of concern and single responsibility principle as it follows single responsibility principle as each service has it own job, and they dont interfer with each other.
+
+- Interview Nuggets Deployment cycle will be different for each team
+
+how these services talk to each other using API
+
+how these services are deployed and how we can access them?
+
+we can use different tech stack in  microservices architecture. Multiple tech stack can be used based on the use case.
+
+all the services run on their own specific port.
+
+example :1234 ui service
+:1000 backend service
+:3000 - sms service
+
+and all these serives will be mapped to a domain name.
+
+how they interact? they make a call to the url /api /sms /ui etc which is the port number
+
+2 ways how web app & ui applications fetch data from backed
+
+1. As soon as our page loads we can make the api call and render the ui
+
+suppose time to load = 500ms then it shows the ui after 500ms
+Approach -
+loads - api - render
+
+2. As soon as the page loads, we will quicky render ui skeleton - and now we will make API call and then renders the data
+Approach -
+loads - render -
+api - render
+
+For better ux follow approach 2
+
+It's not a good practice to show a lot of information in a small frame of time, so rendering of ui skeleton gives the user idea about what information is gonna load and then after render it makes sense.
+
+React renders the data efficiently
+
+React's render cycle is fast af, react has one of the best render mechanism.
+
+react hooks are nothing but a normal javascript function that have some specific use cases.
+
+- useEffect();
+import userEffect
+it takes two arguements.
+1. callback function
+2. dependency array
+
+whatever we pass inside the callback function will be called after the ui component is rendered.
+
+
+			</pre
+				>
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
