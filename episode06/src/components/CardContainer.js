@@ -1,19 +1,18 @@
-// import React from "react";
-// import Card from "./Card";
+import Card from "./Card";
 
-// const CardContainer = ({ newRestaurantData }) => {
-// 	const uniqueKeyID = 1144;
-// 	console.log("From CardContainer", uniqueKeyID);
-// 	return (
-// 		<section className="cardContainer">
-// 			{newRestaurantData.map((element, index) => (
-// 				<Card
-// 					key={index + "resAPP" + uniqueKeyID}
-// 					propsResData={element}
-// 				/>
-// 			))}
-// 		</section>
-// 	);
-// };
+const CardContainer = ({ dataRestaurant }) => {
+	const uniqueKeyID = dataRestaurant[0].info.id;
 
-// export default CardContainer;
+	return (
+		<section className="cardContainer">
+			{dataRestaurant.map((element, index) => (
+				<Card
+					key={index + "resAPP" + uniqueKeyID}
+					propData={element}
+				/>
+			))}
+		</section>
+	);
+};
+
+export default CardContainer;

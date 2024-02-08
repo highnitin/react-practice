@@ -114,12 +114,12 @@ cursor: not-allowed;
     align-items: flex-start;
     justify-content: space-between;
     margin: 15px;
-    padding: 15px;
+    padding: 15px 15px 25px 15px;
     width: 250px;
-    /* height: fit-content; */
-    min-height: max-content;
+    height:390px;
     transition: transform 0.3s ease-in-out;
 }
+
 
 .card:hover{
     border: 2px solid rgba(128, 128, 128, 0.486);
@@ -129,10 +129,6 @@ cursor: not-allowed;
     transform: scale(1.08);
 
 }
-
-/* .card:hover-out {
-    transform: scale(1);
-} */
 
 .featureSection{
     display: flex;
@@ -157,9 +153,6 @@ cursor: not-allowed;
     font-size: 14px;
 }
 
-.cardETA {
-    
-}
 .card:hover .cardETA    {
     color: green;
 }

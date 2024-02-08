@@ -1,15 +1,14 @@
-// import ResCard from "./NewCard";
 import React from "react";
-import NewCard from "./NewCard";
+import CardContainer from "./CardContainer";
 import restaurantData from "../utils/demoData";
 import { useState } from "react";
 import { useEffect } from "react";
+import SearchSection from "./SearchSection";
 
 const Main = () => {
 	const [newRestaurantData, setNewRestaurantData] = useState(restaurantData);
 
 	useEffect(() => {
-		console.log("After Fetching");
 		fetchLiveData();
 	}, []);
 
@@ -21,49 +20,26 @@ const Main = () => {
 		setNewRestaurantData(
 			response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
 		);
-		console.log(
-			"Received Data",
-			response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-		);
+	};
+
+	const handleFilter = (data) => {
+		setNewRestaurantData(data);
 	};
 
 	return (
 		<main className="mainSection">
-			<section className="cardContainer">
-				{newRestaurantData.map((element) => (
-					<NewCard propData={element} />
-					// <NewCard propData={element} />
-				))}
-			</section>
+			<SearchSection onFilter={handleFilter} />
+			<CardContainer dataRestaurant={newRestaurantData || restaurantData} />
 		</main>
 	);
 };
 
 export default Main;
 
-// const [newRestaurantData, setNewRestaurantData] = useState(null);
+// for element
+// object aara hai and element k aandar no aaray
 
-// useEffect(() => {
-// console.log("After Fetching");
-// fetchLiveData();
-// }, []);
+// props.propdata.card.card.info
 
-// const fetchLiveData = async () => {
-// 	const fetchData = await fetch(
-// 		"https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1372529&lng=79.058856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-// 	);
-// 	const response = await fetchData.json();
-// 	setNewRestaurantData(
-// 		response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-// 	);
-// 	console.log(
-// 		"Received Data",
-// 		response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-// 	);
-// };
-
-// console.log("From this console", restaurantData);
-
-// const handleFilter = (data) => {
-// 	setNewRestaurantData(data);
-// };
+// for newRestaurant
+// array aara hai and hume array element ko access karna hai

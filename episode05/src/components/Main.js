@@ -13,11 +13,7 @@ const Main = () => {
 	return (
 		<main className="mainSection">
 			<SearchSection onFilter={handleFilter} />
-			{/* Step 1: Pass onFilter callback */}
-			<CardContainer
-				newRestaurantData={filteredData || restaurantData}
-				// Step 5: Pass filteredData to CardContainer
-			/>
+			<CardContainer newRestaurantData={filteredData || restaurantData} />
 		</main>
 	);
 };
