@@ -6,6 +6,7 @@ import CardCuisineList from "./CardCuisineList";
 import CardAddress from "./CardAddress";
 
 const Card = (props) => {
+	// console.log(props);
 	const {
 		name,
 		cloudinaryImageId,
@@ -22,6 +23,7 @@ const Card = (props) => {
 	const featureArray = { veg, avgRating, slaString };
 	const completeCuisineList = cuisines.join(", ");
 	const completeAddress = locality + ", " + areaName;
+
 	return (
 		<section className="card">
 			<CardImage url={cloudinaryImageId} />

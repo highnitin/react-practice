@@ -378,7 +378,7 @@ const restaurantData = [
 	},
 ];
 
-export default restaurantData;
+// export default restaurantData;
 
 // const tempData = [
 // 	{

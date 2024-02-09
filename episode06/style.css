@@ -220,3 +220,36 @@ cursor: not-allowed;
     justify-content: center;
     align-items: center;
 }
+
+.shimmerContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.shimmerCard{
+    border: 2px solid rgba(128, 128, 128, 0.247);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 15px;
+    padding: 15px 15px 25px 15px;
+    width: 250px;
+    height:390px;
+}
+
+.shimmerImg{
+    /* border-radius: 8px; */
+    border: none;
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0d5;
+}
+
+.shimmerLine{
+    width: 100%;
+    height: 25px;
+    background-color: #f0f0f0d5;
+    border: none;
+}

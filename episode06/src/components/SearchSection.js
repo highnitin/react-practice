@@ -8,7 +8,8 @@ const fetchLiveData = async () => {
 	);
 	const response = await fetchData.json();
 	restaurantData =
-		response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+		response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+			?.restaurants;
 };
 
 fetchLiveData();

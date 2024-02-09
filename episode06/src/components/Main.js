@@ -1,12 +1,12 @@
 import React from "react";
 import CardContainer from "./CardContainer";
-import restaurantData from "../utils/demoData";
+// import restaurantData from "../utils/demoData";
 import { useState } from "react";
 import { useEffect } from "react";
 import SearchSection from "./SearchSection";
 
 const Main = () => {
-	const [newRestaurantData, setNewRestaurantData] = useState(restaurantData);
+	const [newRestaurantData, setNewRestaurantData] = useState([]);
 
 	useEffect(() => {
 		fetchLiveData();
@@ -18,7 +18,8 @@ const Main = () => {
 		);
 		const response = await fetchData.json();
 		setNewRestaurantData(
-			response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+				?.restaurants
 		);
 	};
 
@@ -29,7 +30,7 @@ const Main = () => {
 	return (
 		<main className="mainSection">
 			<SearchSection onFilter={handleFilter} />
-			<CardContainer dataRestaurant={newRestaurantData || restaurantData} />
+			<CardContainer dataRestaurant={newRestaurantData} />
 		</main>
 	);
 };
