@@ -1,4 +1,4 @@
-// import restaurantData from "../utils/demoData";
+import { useState } from "react";
 
 let restaurantData;
 
@@ -13,9 +13,10 @@ const fetchLiveData = async () => {
 };
 
 fetchLiveData();
-// console.log(restaurantData[0].info);
 
 const SearchSection = ({ onFilter }) => {
+	const [inputValue, setInputValue] = useState("");
+
 	const filterButtonSectionEvent = () => {
 		const filteredData = restaurantData.filter(
 			(res) => res.info.avgRating >= 4.4
@@ -28,36 +29,43 @@ const SearchSection = ({ onFilter }) => {
 		onFilter(filteredData);
 	};
 
+	const searchButtonClickEvent = () => {
+		const filteredData = restaurantData.filter((res) =>
+			res.info.name.toLowerCase().includes(inputValue.toLowerCase())
+		);
+
+		filteredData.length === 0 ? null : onFilter(filteredData);
+	};
+
+	const inputOnChangeEvent = (e) => {
+		setInputValue(e.target.value);
+	};
+
 	return (
 		<section className="searchSection">
-			<form
-				id="formSection"
-				className="formSection">
-				<input
-					type="text"
-					name="name"
-					placeholder="You're Fav food is waiting"
-					className="inputSection"
-				/>
-				<input
-					type="submit"
-					value="Submit"
-					className="submitButtonSection"
-					disabled
-				/>
-			</form>
+			<input
+				type="text"
+				name="name"
+				placeholder="You're Fav food is waiting"
+				className="inputSection"
+				value={inputValue}
+				onChange={inputOnChangeEvent}
+			/>
+			<button
+				className="submitButtonSection"
+				onClick={searchButtonClickEvent}
+				value={"submit"}>
+				Search Now!
+			</button>
 			<button
 				className="filterButtonSection"
-				// Step 2: Handle click event
 				onClick={filterButtonSectionEvent}>
 				Filter the fukng best
 			</button>
 
 			<button
 				className="filterButtonSection"
-				onClick={ClearButtonSectionEvent}
-				// Step 2: Handle clear click event (Add on)
-			>
+				onClick={ClearButtonSectionEvent}>
 				Clear Filter
 			</button>
 		</section>

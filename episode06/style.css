@@ -37,6 +37,7 @@ h3{
 
 .navBarList{
     display: flex;
+    align-items: center;
     gap: 50px;
     list-style-type: none;
     padding: 0px 55px;
@@ -89,7 +90,7 @@ li {
 }
 
 .submitButtonSection:hover {
-cursor: not-allowed;
+cursor: pointer;
 }
 
 .cardContainer{
@@ -225,6 +226,8 @@ cursor: not-allowed;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .shimmerCard{
@@ -239,17 +242,42 @@ cursor: not-allowed;
     height:390px;
 }
 
+
+
 .shimmerImg{
     /* border-radius: 8px; */
     border: none;
     width: 100%;
     height: 200px;
-    background-color: #f0f0f0d5;
+    /* background-color: #f0f0f0d5; */
+    background: linear-gradient(to right, #f0f0f0d5 0%, #d3d0d0 50%, #f0f0f0d5 100%); /* Gradient background with shimmer effect */
+    background-size: 200% 100%;
 }
 
 .shimmerLine{
     width: 100%;
     height: 25px;
-    background-color: #f0f0f0d5;
     border: none;
+    /* background-color: #f0f0f0d5; */
+    background: linear-gradient(to right, #f0f0f0d5 0%, #d3d0d0 50%, #f0f0f0d5 100%); /* Gradient background with shimmer effect */
+    background-size: 200% 100%;
+}
+
+
+@keyframes shimmer {
+    0% { background-position: -1000px; } 
+    100% { background-position: 1000px; } 
+}
+
+.shimmerImg, .shimmerLine {
+    animation: shimmer 10s infinite linear; 
+}
+
+
+
+.loginButton {
+    padding: 12px 15px;
+    border: 1px solid gray ;
+    border-radius: 8px;
+    cursor: pointer;
 }

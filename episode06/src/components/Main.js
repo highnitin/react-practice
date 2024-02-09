@@ -8,6 +8,8 @@ import SearchSection from "./SearchSection";
 const Main = () => {
 	const [newRestaurantData, setNewRestaurantData] = useState([]);
 
+	const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
+
 	useEffect(() => {
 		fetchLiveData();
 	}, []);
@@ -21,16 +23,20 @@ const Main = () => {
 			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
 				?.restaurants
 		);
+		setFilteredRestaurantList(
+			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+				?.restaurants
+		);
 	};
 
 	const handleFilter = (data) => {
-		setNewRestaurantData(data);
+		setFilteredRestaurantList(data);
 	};
 
 	return (
 		<main className="mainSection">
 			<SearchSection onFilter={handleFilter} />
-			<CardContainer dataRestaurant={newRestaurantData} />
+			<CardContainer dataRestaurant={filteredRestaurantList} />
 		</main>
 	);
 };
