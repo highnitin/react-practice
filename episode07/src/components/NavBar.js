@@ -1,11 +1,11 @@
-// console.log("NavBar Rendered 5");
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	const [currentState, setCurrentState] = useState("Login");
 
 	// console.log("NavBar Rendered 1");/
-	console.log("NavBar Rendered");
+	// console.log("NavBar Rendered");
 
 	// useEffect(() => {
 	// 	console.log("Inside UseEffect");
@@ -18,7 +18,7 @@ const NavBar = () => {
 	// if the dependency [] is empty array useEffect(callback fn, []) => useEffect will be called only once we the component renders for the 1st time.
 
 	useEffect(() => {
-		console.log("Inside UseEffect");
+		// console.log("Inside UseEffect");
 	}, [currentState]);
 	// if the dependency [something] is not empty array useEffect(callback fn, [something]) => useEffect will be called each time when the value of dependency updates.
 
@@ -33,11 +33,21 @@ const NavBar = () => {
 	return (
 		<nav className="navBar">
 			<ul className="navBarList">
-				<li>Home</li>
-				<li>About</li>
-				<li>Contact</li>
-				<li>Blog</li>
-				<li>Cart</li>
+				<li>
+					<Link to="/">Home</Link>
+				</li>
+				<li>
+					<Link to="/about">About</Link>
+				</li>
+				<li>
+					<Link to="/contact">Contact</Link>
+				</li>
+				<li>
+					<Link to="/blog">Blog</Link>
+				</li>
+				<li>
+					<Link to="/cart">Cart</Link>
+				</li>
 				<li>
 					<button
 						className="loginButton"

@@ -46,15 +46,21 @@ h3{
     padding: 0px 55px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: gray;
+ }
+
 li {
     cursor: pointer;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 
-.navBarList li:hover{
-    color: gray;
- }
 
 .mainSection {
     background-color: bisque;
@@ -304,3 +310,40 @@ cursor: pointer;
 
 }
 
+
+.restaurantDetails{
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.restaurantInfo {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;    
+    padding: 20px;
+    width: 50vw;
+}
+.restaurantOffer {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 20px;
+    width: 50vw;
+}
+
+.restaurantMenu {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 20px;
+    width: 50vw;
+
+}

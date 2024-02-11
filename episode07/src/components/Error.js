@@ -5,8 +5,6 @@ import { useRouteError } from "react-router-dom";
 
 const Error = () => {
 	const err = useRouteError();
-	// console.log(err.status);
-	// console.log(err.data);
 	return (
 		<>
 			<Header />
