@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ShimmerContainer from "./ShimmerContainer";
 
 const RestaurantDetails = () => {
-	const [restaurantData, setRestaurantData] = useState();
+	const [restaurantData, setRestaurantData] = useState(null);
 
 	useEffect(() => {
 		fetchRestaurantDetails();
@@ -15,23 +15,39 @@ const RestaurantDetails = () => {
 			"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1458004&lng=79.0881546&restaurantId=53419"
 		);
 		const response = await data.json();
-		console.log(response.cards[0].card.card.info);
+		// console.log(response.data.cards[0].card.card.info);
 
 		setRestaurantData(response.data);
 	};
+
+	if (restaurantData === null) return <ShimmerContainer />;
 	// console.log(restaurantData);
+	const { name, cuisines, locality, areaName, sla, costForTwoMessage } =
+		restaurantData?.cards[0]?.card?.card?.info;
+	// console.log(name);
+	const { header, couponCode, description } =
+		restaurantData?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers[0]
+			?.info;
 
-	// restaurantData.length === 0 ? <ShimmerContainer /> : null;
+	// console.log(restaurantData?cards[2]?.groupedCard.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[0]?.card.info);
 
-	// const { name, cuisines, locality, areaName, sla, costForTwoMessage } =
-	// 	restaurantData.data.cards[0].card.card.info;
-	// const {} = restaurantData.data.cards[1].card.card.info;
-	console.log(name);
+	// console.log(
+	// 	restaurantData?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card
+	// 		?.card?.itemCards[0]?.card
+	// );
+	const { info } =
+		restaurantData?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card
+			?.card?.itemCards[0]?.card;
 
+	const RES_IMAGE_URL =
+		"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,e_grayscale,c_fit/";
+
+	console.log(info);
+
+	// name, imageId, description, category, itemAttribute.vegClassifier
 	return (
 		<section className="restaurantDetails">
 			<h2>Restaurant Page</h2>
-
 			<section className="restaurantInfo">
 				<h2 className="restaurantName">{name}</h2>
 				<p className="restaurantCuisine">{cuisines.join(", ")}</p>
@@ -43,12 +59,18 @@ const RestaurantDetails = () => {
 				<h2 className="restauranDeliveryTime">{sla.slaString}</h2>
 				<p className="restaurantCostForTwo">{costForTwoMessage}</p>
 				<section className="coupounCardContainer">
-					<p className="coupounCard">
-						20% off up to ₹125 | Use KOTAK125 Above ₹500
-					</p>
-					<p className="coupounCard">
-						20% off up to ₹125 | Use KOTAK125 Above ₹500
-					</p>
+					<section className="coupounCard">
+						<h2 className="couponCardHeading">{header}</h2>
+						<p className="couponCardDescription">
+							{couponCode} | {description}
+						</p>
+					</section>
+					<section className="coupounCard">
+						<h2 className="couponCardHeading">{header}</h2>
+						<p className="couponCardDescription">
+							{couponCode} | {description}
+						</p>
+					</section>
 				</section>
 			</section>
 			<section className="restaurantMenu">
@@ -56,11 +78,13 @@ const RestaurantDetails = () => {
 				<section className="restaurantSingleMenu">
 					<section className="restaurantSingleMenuInfo">
 						<p>Veg</p>
-						<p>Golgappa + (Serves 1-2)</p>
-						<p>Rs. 59</p>
-						<p>Painipuri is a famous dish in nagpur from Haldiram</p>
+						<p>{info.name}</p>
+						<p>₹ {info.price / 100}</p>
+						<p>{info.description}</p>
+						<p>{info.itemAttribute.vegClassifier}</p>
 					</section>
 					<section className="restaurantSingleMenuImage">
+						<img src={RES_IMAGE_URL + info.imageId} />
 						<p>Image</p>
 					</section>
 				</section>
