@@ -1,26 +1,47 @@
+import { useEffect, useState } from "react";
+import ShimmerContainer from "./ShimmerContainer";
+
 const RestaurantDetails = () => {
+	const [restaurantData, setRestaurantData] = useState();
+
+	useEffect(() => {
+		fetchRestaurantDetails();
+	}, []);
+
+	// console.log("body rendered");
+
 	const fetchRestaurantDetails = async () => {
 		const data = await fetch(
 			"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1458004&lng=79.0881546&restaurantId=53419"
 		);
 		const response = await data.json();
-		console.log(response);
-	};
+		console.log(response.cards[0].card.card.info);
 
-	fetchRestaurantDetails();
+		setRestaurantData(response.data);
+	};
+	// console.log(restaurantData);
+
+	// restaurantData.length === 0 ? <ShimmerContainer /> : null;
+
+	// const { name, cuisines, locality, areaName, sla, costForTwoMessage } =
+	// 	restaurantData.data.cards[0].card.card.info;
+	// const {} = restaurantData.data.cards[1].card.card.info;
+	console.log(name);
 
 	return (
 		<section className="restaurantDetails">
 			<h2>Restaurant Page</h2>
 
 			<section className="restaurantInfo">
-				<h2 className="restaurantName">HaldiRam</h2>
-				<p className="restaurantCuisine">Indian, Chinese, Italian</p>
-				<p className="restaurantAddress">Shankar Nagar, 2.5 KM</p>
+				<h2 className="restaurantName">{name}</h2>
+				<p className="restaurantCuisine">{cuisines.join(", ")}</p>
+				<p className="restaurantAddress">
+					{locality}, {areaName} | {sla.lastMileTravelString}
+				</p>
 			</section>
 			<section className="restaurantOffer">
-				<h2 className="restauranDeliveryTime">20-30 Mins</h2>
-				<p className="restaurantCostForTwo">Rs. 250 for two</p>
+				<h2 className="restauranDeliveryTime">{sla.slaString}</h2>
+				<p className="restaurantCostForTwo">{costForTwoMessage}</p>
 				<section className="coupounCardContainer">
 					<p className="coupounCard">
 						20% off up to ₹125 | Use KOTAK125 Above ₹500
