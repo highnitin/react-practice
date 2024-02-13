@@ -4,9 +4,10 @@ import CardPriceForTwo from "./CardPriceForTwo";
 import CardFeatureSection from "./CardFeatureSection";
 import CardCuisineList from "./CardCuisineList";
 import CardAddress from "./CardAddress";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
-	// console.log(props);
+	// console.log(props.propData.info.id);
 	const {
 		name,
 		cloudinaryImageId,
@@ -17,22 +18,25 @@ const Card = (props) => {
 		veg,
 		avgRating,
 		sla,
+		id,
 	} = props.propData.info;
 
 	const { slaString } = sla;
 	const featureArray = { veg, avgRating, slaString };
 	const completeCuisineList = cuisines.join(", ");
 	const completeAddress = locality + ", " + areaName;
-
+	// const url = "/restaurant/" + id;
 	return (
-		<section className="card">
-			<CardImage url={cloudinaryImageId} />
-			<CardHeading heading={name} />
-			<CardPriceForTwo priceForTwo={costForTwo} />
-			<CardFeatureSection featureSection={featureArray} />
-			<CardCuisineList cuisineList={completeCuisineList} />
-			<CardAddress address={completeAddress} />
-		</section>
+		<Link to={"restaurant/" + id}>
+			<section className="card">
+				<CardImage url={cloudinaryImageId} />
+				<CardHeading heading={name} />
+				<CardPriceForTwo priceForTwo={costForTwo} />
+				<CardFeatureSection featureSection={featureArray} />
+				<CardCuisineList cuisineList={completeCuisineList} />
+				<CardAddress address={completeAddress} />
+			</section>
+		</Link>
 	);
 };
 

@@ -347,3 +347,26 @@ cursor: pointer;
     width: 50vw;
 
 }
+
+.coupounCardContainer{
+    border: 2px solid pink;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.coupounCard{
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.restaurantSingleMenuContainer{
+    border: 2px solid pink;
+}
+
+.restaurantSingleMenu{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
