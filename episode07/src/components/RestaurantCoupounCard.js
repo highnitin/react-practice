@@ -1,5 +1,4 @@
 const RestaurantCoupounCard = (props) => {
-	// console.log("Here", props);
 	const { header, couponCode, description } = props.data.info;
 	return (
 		<section className="coupounCard">

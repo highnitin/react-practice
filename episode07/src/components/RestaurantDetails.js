@@ -3,7 +3,7 @@ import ShimmerContainer from "./ShimmerContainer";
 import RestaurantInfo from "./RestaurantInfo";
 import RestaurantOffer from "./RestaurantOffer";
 import RestaurantMenu from "./RestaurantMenu";
-import { Routes, Route, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
 
 const RestaurantDetails = () => {
