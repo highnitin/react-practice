@@ -297,7 +297,7 @@ cursor: pointer;
 
 
 .page{
-    height: 75vh;
+    /* height: 75vh; */
     background-color: rgba(255, 228, 196, 0.291);
     color: beige;
     display: flex;
@@ -386,4 +386,6 @@ cursor: pointer;
     display: flex;
     flex-direction: row;
     gap: 50px;
+    /* margin: 0 0 50px 0; */
+    padding:50px;
 }

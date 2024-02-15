@@ -51,6 +51,152 @@
 				all the props what we have passed will be combined together and will be
 				passed
 			</li>
+
+			<li>
+				how to create state variables and local variables in class based
+				components?
+			</li>
+			<li>
+				when we say we rendering a functional component what does that mean?
+			</li>
+			<li>
+				we are mounting the functional component, loading or invoking the
+				function.
+			</li>
+			<li>
+				loading a class based component on the web page? it mean we are creating
+				an instance of the class.
+			</li>
+			<li>
+				and whenever we create a new instance of a class constructor is called.
+				and constructor is the best place to receive props and this is the best
+				place to create state variable.
+			</li>
+			<li>the state is a big object that contains all the state variables</li>
+			<li>how to create multiple state variables in class based components.</li>
+			<li>
+				never update the state variables in class based comoponent directly
+			</li>
+			<li>
+				how to create state variables and local variables in class based
+				components?
+			</li>
+			<li>
+				when we say we rendering a functional component what does that mean?
+			</li>
+			<li>
+				we are mounting the functional component, loading or invoking the
+				function. loading a class based component on the web page? it mean we
+				are creating an instance of the class.
+			</li>
+			<li>
+				and whenever we create a new instance of a class constructor is called.
+				and constructor is the best place to receive props and this is the best
+				place to create state variable.
+			</li>
+			<li>the state is a big object that contains all the state variables</li>
+			<li>
+				how to create multiple state variables in class based components. never
+				update the state variables in class based comoponent directly
+			</li>
+			<li>
+				this.state = {} state is a reserved keyword, also it is a big object
+			</li>
+			<li>
+				whenever state variable is updated, reacted triggers reconciliation and
+				with the help of diff algorigthm it finds the difference and replace the
+				updates and then rerenders the component.
+			</li>
+			<li>loading and monuting the component is one and the same</li>
+			<li>
+				the first thing when a class is loaded the instance is created, the
+				constructor is called and then render method is called.
+			</li>
+			<li>learn more about componentDidMount() method</li>
+			<li>
+				life cycle of class component - first constructor is called, second
+				render method is called and then componentDidMount() will be count.
+			</li>
+			<li>
+				react render life cycle diagram wojtekmaj diagram for react lifecycle
+				methods
+			</li>
+			<li>
+				never ever compare react life cycle method to functional component
+			</li>
+			<li>componentWillUnmount() is not equal to useEffect()</li>
+			<li>
+				in useEffect() if we dont put dependency array then after each render it
+				will be called.
+			</li>
+
+			<li>
+				in componentDidMount() it is only called once, and it will be mounted
+				only once. After every subsequent render it is not mounted it will be
+				updated.
+			</li>
+			<li>
+				<pre>
+
+					componentDidUpdate (prevProps, prevState) {
+						if (condition1 || condition 2)
+						{do something}
+					}
+					
+					hence in functional code we do write dendencies as an array in useEffect() method
+					
+					example - useEffect(callback, [element1, element2])
+					
+					so now whenever element1 and element2 are updated the component will re render.
+					
+					now imagine writing conditions with 20-30 lines and imagine the pain. so congratulations guys you are lucky as you are learning modern react.
+					
+					componentWillUnmount() method
+					it will be called once we leave the page
+					
+					how many pages does our food app have? it is a single page, we have built a single page application.
+					
+					do a setInterval(callback,time) and check if the callback method is working on other pages as well, example go to home and then back to about - you will see on home page the callback method will be executed once after each time (time given in the setInterval), now go back to about page and check the called method will be executed twice after each time (time given in the setInterval)
+					
+					again go to home and come back to about now the callback inside setInterval will be called thrice.
+					
+					and this is what stops an app to become scalable.
+					
+					we need to clear the interval, how to clear interval? you have to write clearInterval() inside componentWillUnmount() method. 
+					
+					but now how will you add reference?
+					
+					so we need to use this keyword, while writing setInterval() we have to write this.setInterval(callback fn, timeInterval)
+					
+					or 
+					
+					this.timer = setinterval(callback fn,time)
+					
+					and inside we have to write something like componentWillUnmount(){
+						clearInterval(this.timer)
+					}
+					
+					what will happen if you write setInterval() inside functional component?
+					
+					will the setInterval will stop or not?
+					
+					it will not stop it will behave the same behave as it did in class based component.
+					
+				</pre
+				>
+			</li>
+
+			<li>why do we write super(props) and constructor(props)</li>
+			<li>more about aysnc componentDidMount() {}</li>
+			<li>
+				why we cannot make useEffect() as a async function, why we cannot use
+				async?
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
 	</body>
 </html>
