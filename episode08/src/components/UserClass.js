@@ -10,8 +10,20 @@ class UserClasss extends React.Component {
 		console.log("Child constructor");
 	}
 
+	componentDidUpdate() {
+		console.log(this.props.name, "Child component did update");
+	}
+
 	componentDidMount() {
+		this.timer = setInterval(() => {
+			console.log("Inside component did mount");
+		}, 1000);
 		console.log(this.props.name, "Child component did mount");
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.timer);
+		console.log(this.props.name, "Child component did unmount");
 	}
 
 	render() {

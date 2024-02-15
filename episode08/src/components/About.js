@@ -26,13 +26,13 @@ class About extends Component {
 				<h1>About Page</h1>
 				<p>Welcome to About Page</p>
 				<section className="aboutPageContainer">
-					<UserFunction
+					{/* <UserFunction
 						name={"Nitin"}
 						description={"Tech VA"}
 						location={"India"}
 						skills={"AI Enthusiast"}
 						count={0}
-					/>
+					/> */}
 					<UserClasss
 						name={"First"}
 						description={"Tech VA"}
@@ -40,13 +40,13 @@ class About extends Component {
 						skills={"AI Enthusiast"}
 						count={0}
 					/>
-					<UserClasss
+					{/* <UserClasss
 						name={"Second"}
 						description={"Tech VA"}
 						location={"India"}
 						skills={"AI Enthusiast"}
 						count={0}
-					/>
+					/> */}
 				</section>
 			</section>
 		);
