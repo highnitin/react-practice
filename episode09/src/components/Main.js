@@ -3,25 +3,25 @@ import CardContainer from "./CardContainer";
 import { useState } from "react";
 import SearchSection from "./SearchSection";
 import useRestaurantApi from "../utils/useRestaurantApi";
-import ShimmerContainer from "./ShimmerContainer";
+// import ShimmerContainer from "./ShimmerContainer";
 
 const Main = () => {
 	const restaurantInfo = useRestaurantApi();
-	console.log("restaurantinfo from main", restaurantInfo);
-	const { newRestaurantInfo, setNewRestaurantInfo } = useState(restaurantInfo);
-	console.log("new restaurantinfo from main", newRestaurantInfo);
-
-	if (newRestaurantInfo === null) return <ShimmerContainer />;
-
-	const handleFilter = (data) => {
-		setNewRestaurantInfo(data);
+	const [newRestaurantInfo, setNewRestaurantInfo] = useState();
+	const handleFilter = (restaurants) => {
+		// console.log("data", { restaurantsList });
+		// console.log("type of data", typeof restaurantsList);
+		setNewRestaurantInfo({ restaurants });
 	};
-	// console.log(restaurantInfo);
+	// console.log("restaurantInfo", restaurantInfo?.restaurants);
+	// console.log("newRestaurantInfo", newRestaurantInfo?.restaurants);
 
 	return (
 		<main className="mainSection">
 			<SearchSection onFilter={handleFilter} />
-			<CardContainer dataRestaurant={newRestaurantInfo} />
+			<CardContainer
+				dataRestaurant={newRestaurantInfo ? newRestaurantInfo : restaurantInfo}
+			/>
 		</main>
 	);
 };

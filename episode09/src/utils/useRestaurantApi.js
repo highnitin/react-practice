@@ -22,10 +22,10 @@ const useRestaurantApi = () => {
 		// 	response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
 		// 		?.restaurants
 		// );
-		console.log(
-			"API response",
-			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-		);
+		// console.log(
+		// 	"API response",
+		// 	response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+		// );
 		setFilteredRestaurantList(
 			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
 		);
@@ -33,7 +33,7 @@ const useRestaurantApi = () => {
 	};
 	// fetchLiveData();
 
-	console.log("Filteredreslist", filteredRestaurantList);
+	// console.log("Filteredreslist", filteredRestaurantList);
 	return filteredRestaurantList;
 };
 
