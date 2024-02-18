@@ -25,7 +25,6 @@ const Card = (props) => {
 	const featureArray = { veg, avgRating, slaString };
 	const completeCuisineList = cuisines.join(", ");
 	const completeAddress = locality + ", " + areaName;
-	// const url = "/restaurant/" + id;
 	return (
 		<Link to={"restaurant/" + id}>
 			<section className="card">
