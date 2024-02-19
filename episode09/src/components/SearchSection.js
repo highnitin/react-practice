@@ -2,15 +2,15 @@ import { useState } from "react";
 
 let restaurantData;
 
-const fetchLiveData = async () => {
-	const fetchData = await fetch(
-		"https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1372529&lng=79.058856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-	);
-	const response = await fetchData.json();
-	restaurantData =
-		response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-			?.restaurants;
-};
+// const fetchLiveData = async () => {
+// 	const fetchData = await fetch(
+// 		"https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1372529&lng=79.058856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+// 	);
+// 	const response = await fetchData.json();
+// 	restaurantData =
+// 		response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+// 			?.restaurants;
+// };
 
 fetchLiveData();
 
