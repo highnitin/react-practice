@@ -26,6 +26,10 @@ Feel free to explore the code, projects, and notes provided in this repository. 
 
 For more details about the "Namastey React" course, please refer to the official course materials or visit the course website [here](https://namastedev.com/learn/namaste-react).
 
+## Content / curriculum 
+
+Please check the learning material in repective episode.
+
 ## Connect with Me
 
 For further discussions or collaborations, you can reach me at:
