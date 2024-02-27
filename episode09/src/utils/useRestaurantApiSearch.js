@@ -1,11 +1,15 @@
-import { MENU_API } from "./constants";
+import { RES_API } from "./constants";
 import { useEffect, useState } from "react";
 
 const useRestaurantApiSearch = () => {
-	const [newRestaurantData, setNewRestaurantData] = useState();
+	const [newRestaurantData, setNewRestaurantData] = useState(null);
+
+	useEffect(() => {
+		fetchLiveData();
+	}, []);
 
 	const fetchLiveData = async () => {
-		const fetchData = await fetch(MENU_API);
+		const fetchData = await fetch(RES_API);
 		const response = await fetchData.json();
 
 		setNewRestaurantData(
@@ -13,9 +17,8 @@ const useRestaurantApiSearch = () => {
 				?.restaurants
 		);
 	};
-	fetchLiveData();
 
-	console.log("From API search", newRestaurantData);
+	// console.log("From API search", newRestaurantData);
 	return newRestaurantData;
 };
 

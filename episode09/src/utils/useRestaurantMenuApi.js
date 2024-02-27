@@ -14,7 +14,6 @@ const useRestaurantMenuApi = (resId) => {
 		setRestaurantData(response.data);
 	};
 
-	// console.log("restaurantData here", restaurantData); // object
 	return restaurantData;
 };
 export default useRestaurantMenuApi;
