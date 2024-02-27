@@ -1,3 +1,8 @@
+export const RES_API =
+	"https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1372529&lng=79.058856";
+// export const RES_API =
+// 	"https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1372529&lng=79.058856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
 export const LOGO_URL =
 	"https://i0.wp.com/www.highnitin.com/wp-content/uploads/2022/07/cropped-highnitin_logo_dark.png?resize=84%2C65&ssl=1";
 

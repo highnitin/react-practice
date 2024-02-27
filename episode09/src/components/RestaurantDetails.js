@@ -3,24 +3,24 @@ import RestaurantInfo from "./RestaurantInfo";
 import RestaurantOffer from "./RestaurantOffer";
 import RestaurantMenu from "./RestaurantMenu";
 import { useParams } from "react-router-dom";
-import useRestaurantApiFetch from "../utils/useRestaurantMenuApi";
+import useRestaurantMenuApi from "../utils/useRestaurantMenuApi";
 
 const RestaurantDetails = () => {
 	let { resId } = useParams();
 
-	const resInfo = useRestaurantApiFetch(resId);
+	const resInfo = useRestaurantMenuApi(resId);
 
 	if (resInfo === null) return <ShimmerContainer />;
 
 	// restaurant information
-	const information = resInfo?.cards[0]?.card?.card?.info;
+	const information = resInfo?.cards[2]?.card?.card?.info;
 
 	// restaurant offer
-	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
+	const offer = resInfo?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
 
 	// restaurant menu
 	const menuInformation =
-		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
+		resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
 
 	return (
 		<section className="restaurantDetails">
