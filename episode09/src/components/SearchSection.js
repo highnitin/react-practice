@@ -2,9 +2,10 @@ import { useState } from "react";
 import useRestaurantApiSearch from "../utils/useRestaurantApiSearch";
 
 const SearchSection = ({ onFilter }) => {
+	// console.log("here", onFilter);
 	const restaurantData = useRestaurantApiSearch();
 
-	const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState("Pizza");
 
 	const filterButtonSectionEvent = () => {
 		const filteredData = restaurantData.filter(
@@ -25,7 +26,6 @@ const SearchSection = ({ onFilter }) => {
 		);
 
 		filteredData.length === 0 ? null : onFilter(filteredData);
-		// console.log("Live Data", restaurantData);
 	};
 
 	const inputOnChangeEvent = (e) => {
