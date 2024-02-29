@@ -1,5 +1,5 @@
 const RestaurantInfo = (props) => {
-	console.log(props);
+	// console.log(props);
 	const {
 		name,
 		cuisines,

@@ -14,8 +14,8 @@ const RestaurantDetails = () => {
 
 	// restaurant information
 	const information = resInfo?.cards[0]?.card?.card?.info;
-	console.log(resInfo);
-	console.log("Information from restaurantDetails", information);
+	// console.log(resInfo);
+	// console.log("Information/ from restaurantDetails", information);
 
 	// restaurant offer
 	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
