@@ -13,14 +13,16 @@ const RestaurantDetails = () => {
 	if (resInfo === null) return <ShimmerContainer />;
 
 	// restaurant information
-	const information = resInfo?.cards[2]?.card?.card?.info;
+	const information = resInfo?.cards[0]?.card?.card?.info;
+	console.log(resInfo);
+	console.log("Information from restaurantDetails", information);
 
 	// restaurant offer
-	const offer = resInfo?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
+	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
 
 	// restaurant menu
 	const menuInformation =
-		resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
+		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
 
 	return (
 		<section className="restaurantDetails">
