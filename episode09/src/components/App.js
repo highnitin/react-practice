@@ -1,14 +1,22 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Contact from "./Contact";
-import About from "./About";
-import Blog from "./Blog";
-import Error from "./Error";
-import RestaurantDetails from "./RestaurantDetails";
+// import Contact from "./Contact";
+// import Blog from "./Blog";
+// import Error from "./Error";
+// import RestaurantDetails from "./RestaurantDetails";
+// import About from "./About";
+// import Grocery from "./Grocery";
+
+const Contact = lazy(() => import("./Contact"));
+const Blog = lazy(() => import("./Blog"));
+const RestaurantDetails = lazy(() => import("./RestaurantDetails"));
+const About = lazy(() => import("./About"));
+const Grocery = lazy(() => import("./Grocery"));
+const Error = lazy(() => import("./Error"));
 
 const App = () => {
 	return (
@@ -31,22 +39,50 @@ const appRouter = createBrowserRouter([
 			},
 			{
 				path: "/about",
-				element: <About />,
+				element: (
+					<Suspense>
+						<About />
+					</Suspense>
+				),
 			},
 			{
 				path: "/contact",
-				element: <Contact />,
+				element: (
+					<Suspense>
+						<Contact />
+					</Suspense>
+				),
 			},
 			{
 				path: "/blog",
-				element: <Blog />,
+				element: (
+					<Suspense>
+						<Blog />
+					</Suspense>
+				),
+			},
+			{
+				path: "/grocery",
+				element: (
+					<Suspense>
+						<Grocery />
+					</Suspense>
+				),
 			},
 			{
 				path: "/restaurant/:resId",
-				element: <RestaurantDetails />,
+				element: (
+					<Suspense>
+						<RestaurantDetails />,
+					</Suspense>
+				),
 			},
 		],
-		errorElement: <Error />,
+		errorElement: (
+			<Suspense>
+				<Error />
+			</Suspense>
+		),
 	},
 ]);
 
