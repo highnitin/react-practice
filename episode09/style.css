@@ -44,6 +44,13 @@ h3{
     gap: 1vw;
     list-style-type: none;
     padding: 0px 55px;
+    justify-content: center;
+}
+
+.navBarListli{
+    display: flex;
+    align-items: center;
+    /* content */
 }
 
 a {
@@ -412,4 +419,8 @@ mix-blend-mode: hard-light  ;
 display: flex;
 flex-direction: column;
 justify-content: center;
+}
+
+.networkStatusIcon{
+    width: 20px;
 }

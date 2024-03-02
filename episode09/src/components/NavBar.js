@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useNetworkStatus from "../utils/useNetworkStatus";
 
 const NavBar = () => {
 	const [currentState, setCurrentState] = useState("Login");
+	let networkStatus = useNetworkStatus();
 
 	useEffect(() => {}, [currentState]);
 
@@ -14,6 +16,7 @@ const NavBar = () => {
 	return (
 		<nav className="navBar">
 			<ul className="navBarList">
+				<li className="navBarListli">{networkStatus ? "🟢" : "🔴"}</li>
 				<li>
 					<Link to="/">Home</Link>
 				</li>

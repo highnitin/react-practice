@@ -2,12 +2,10 @@ import Card from "./Card";
 import ShimmerContainer from "./ShimmerContainer";
 import useNetworkStatus from "../utils/useNetworkStatus";
 import offlineMeme from "../../learnings/offlineMeme.png";
-// import image2 from "../../learnings/image2.png";
 
 const CardContainer = (props) => {
 	const networkStatus = useNetworkStatus();
-	console.log("NS", networkStatus);
-	// if (networkStatus)
+
 	if (networkStatus === false)
 		return (
 			<section className="cardContainer offlineCardContainer">

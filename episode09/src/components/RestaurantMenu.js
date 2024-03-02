@@ -1,8 +1,15 @@
 import RestaurantSingleMenu from "./RestaurantSingleMenu";
 
 const RestaurantMenu = (props) => {
-	const menuArray = props.data.itemCards || props.data.carousel;
+	const uniqueKeyID = 122111;
+	// console.log("Props from here", props);
+	const menuArray =
+		props.data.itemCards ||
+		props.data.carousel ||
+		props.data.categories[0].itemCards ||
+		props.data.categories[1].itemCards;
 
+	// console.log("Props from here", menuArray);
 	return (
 		<section className="restaurantMenu">
 			<h2 className="restaurantRecommendation">
@@ -10,7 +17,7 @@ const RestaurantMenu = (props) => {
 			</h2>
 
 			<section className="restaurantSingleMenuContainer">
-				{menuArray.map((element) =>
+				{menuArray.map((element, index) =>
 					props.data.itemCards ? (
 						<RestaurantSingleMenu
 							key={element.card.info.id}
@@ -18,7 +25,7 @@ const RestaurantMenu = (props) => {
 						/>
 					) : (
 						<RestaurantSingleMenu
-							key={element.dish.info.id}
+							key={index + "resID" + uniqueKeyID}
 							data={element}
 						/>
 					)
