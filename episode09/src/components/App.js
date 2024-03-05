@@ -4,12 +4,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import Contact from "./Contact";
-// import Blog from "./Blog";
-// import Error from "./Error";
-// import RestaurantDetails from "./RestaurantDetails";
-// import About from "./About";
-// import Grocery from "./Grocery";
+
 
 const Contact = lazy(() => import("./Contact"));
 const Blog = lazy(() => import("./Blog"));
