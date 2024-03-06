@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="footerSection">
+		<footer className="footerSection flex justify-center items-center p-4 mx-2 border-t-2 bg-orange-400 fixed bottom-0 w-full">
 			<h3>
 				{" "}
 				Made with ❤️ for the developers community |{" "}

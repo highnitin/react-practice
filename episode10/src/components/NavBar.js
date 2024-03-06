@@ -14,8 +14,8 @@ const NavBar = () => {
 			: setCurrentState("Logout");
 	};
 	return (
-		<nav className="navBar">
-			<ul className="navBarList">
+		<nav className="navBar ">
+			<ul className="navBarList flex space-x-6 text-white">
 				<li className="navBarListli">{networkStatus ? "🟢" : "🔴"}</li>
 				<li>
 					<Link to="/">Home</Link>

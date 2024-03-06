@@ -20,7 +20,7 @@ const Error = lazy(() => import("./Error"));
 
 const App = () => {
 	return (
-		<section className="containerSection">
+		<section className="containerSection bg-black text-white flex flex-col justify-center items-center">
 			<Header />
 			<Outlet />
 			<Footer />

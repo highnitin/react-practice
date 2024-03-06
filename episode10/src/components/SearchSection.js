@@ -33,29 +33,29 @@ const SearchSection = ({ onFilter }) => {
 	};
 
 	return (
-		<section className="searchSection">
+		<section className="searchSection flex space-x-10">
 			<input
 				type="text"
 				name="name"
 				placeholder="You're Fav food is waiting"
-				className="inputSection"
+				className="inputSection rounded-md text-black px-5"
 				value={inputValue}
 				onChange={inputOnChangeEvent}
 			/>
 			<button
-				className="submitButtonSection"
+				className="submitButtonSection bg-white text-black px-5 py-2 rounded-md hover:bg-gray-400 hover:text-white"
 				onClick={searchButtonClickEvent}
 				value={"submit"}>
 				Search Now!
 			</button>
 			<button
-				className="filterButtonSection"
+				className="filterButtonSection bg-white text-black px-5 py-2 rounded-md hover:bg-gray-400 hover:text-white"
 				onClick={filterButtonSectionEvent}>
 				Filter the fukng best
 			</button>
 
 			<button
-				className="filterButtonSection"
+				className="filterButtonSection bg-white text-black px-5 py-2 rounded-md hover:bg-gray-400 hover:text-white"
 				onClick={ClearButtonSectionEvent}>
 				Clear Filter
 			</button>
