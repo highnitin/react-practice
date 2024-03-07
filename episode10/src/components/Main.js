@@ -12,7 +12,7 @@ const Main = () => {
 	};
 
 	return (
-		<main className="mainSection p-4 m-2 w-full flex justify-center items-center">
+		<main className="mainSection p-4 m-2 w-full flex flex-col justify-center items-center">
 			<SearchSection onFilter={handleFilter} />
 			<CardContainer
 				dataRestaurant={newRestaurantInfo ? newRestaurantInfo : restaurantInfo}

@@ -9,7 +9,7 @@ const CardImage = (props) => {
 	}
 	return (
 		<img
-			className="cardImg"
+			className="cardImg w-full min-h-52 bg-cover"
 			src={imageURL}
 			alt="Image Food Dish"
 		/>

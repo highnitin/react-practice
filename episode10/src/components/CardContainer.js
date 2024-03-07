@@ -20,7 +20,7 @@ const CardContainer = (props) => {
 
 	const uniqueKeyID = 12211;
 	return (
-		<section className="cardContainer">
+		<section className="cardContainer flex flex-wrap justify-center">
 			{props?.dataRestaurant === null ||
 			props?.dataRestaurant === undefined ||
 			props?.dataRestaurant === false ? (
