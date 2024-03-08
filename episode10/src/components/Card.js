@@ -26,7 +26,7 @@ const Card = (props) => {
 	const completeAddress = locality + ", " + areaName;
 	return (
 		<Link to={"restaurant/" + id}>
-			<section className="card flex flex-col justify-start items-start border-2 m-5 p-3 w-64 max-h-96 overflow-hidden">
+			<section className="card flex flex-col justify-between items-start border-2 border-gray-400 m-5 p-3 w-64 min-h-96 max-h-96 overflow-hidden rounded-md">
 				<CardImage url={cloudinaryImageId} />
 				<CardHeading heading={name} />
 				<CardPriceForTwo priceForTwo={costForTwo} />

@@ -3,10 +3,16 @@ const CardFoodType = (props) => {
 	let { finalFoodType } = props;
 	if (!finalFoodType || undefined) {
 		finalFoodType = "Non-Veg";
-		resultFinal = <h3 className="cardPriceNonVeg">{finalFoodType}</h3>;
+		resultFinal = (
+			<h3 className="cardPriceNonVeg text-base text-red-500">
+				{finalFoodType}
+			</h3>
+		);
 	} else {
 		finalFoodType = "Veg";
-		resultFinal = <h3 className="cardPriceVeg">{finalFoodType}</h3>;
+		resultFinal = (
+			<h3 className="cardPriceVeg text-base text-green-500">{finalFoodType}</h3>
+		);
 	}
 	return resultFinal;
 };
