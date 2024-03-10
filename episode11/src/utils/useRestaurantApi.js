@@ -13,7 +13,7 @@ const useRestaurantApi = () => {
 		const response = await fetchData.json();
 		console.log("response", response);
 		setFilteredRestaurantList(
-			response?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+			response?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
 		);
 	};
 	return filteredRestaurantList;

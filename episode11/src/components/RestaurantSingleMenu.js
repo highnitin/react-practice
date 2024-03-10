@@ -1,7 +1,9 @@
 const RES_IMAGE_URL =
 	"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
 
-const RestaurantSingleMenu = (props) => {
+const RestaurantSingleMenu = ({ data }) => {
+	console.log("CompleteMenuInformation", data);
+
 	const { name, price, description, itemAttribute, imageId, defaultPrice } =
 		props.data.card?.info || props.data.dish?.info;
 	return (

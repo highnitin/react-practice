@@ -22,6 +22,13 @@ const RestaurantDetails = () => {
 	const menuInformation =
 		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
 
+	const completeMenuInformation =
+		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+			(element) =>
+				element.card.card["@type"] ==
+				"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+		);
+
 	return (
 		<section className="restaurantDetails">
 			<h2>Restaurant Page</h2>
@@ -30,7 +37,7 @@ const RestaurantDetails = () => {
 				data={offer}
 				newData={information}
 			/>
-			<RestaurantMenu data={menuInformation} />
+			<RestaurantMenu data={completeMenuInformation} />
 		</section>
 	);
 };
