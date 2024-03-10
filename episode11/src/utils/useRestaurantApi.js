@@ -11,8 +11,9 @@ const useRestaurantApi = () => {
 	const fetchLiveData = async () => {
 		const fetchData = await fetch(RES_API);
 		const response = await fetchData.json();
+		console.log("response", response);
 		setFilteredRestaurantList(
-			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+			response?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
 		);
 	};
 	return filteredRestaurantList;
