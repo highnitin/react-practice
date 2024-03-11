@@ -30,8 +30,10 @@ const RestaurantDetails = () => {
 		);
 
 	return (
-		<section className="restaurantDetails">
-			<h2>Restaurant Page</h2>
+		<section className="bg-black w-7/12 border border-purple-300 shadow-md p-5 flex flex-col items-center">
+			<h2 className="text-2xl text-gray-400 font-semibold m-5">
+				Restaurant Page
+			</h2>
 			<RestaurantInfo data={information} />
 			<RestaurantOffer
 				data={offer}

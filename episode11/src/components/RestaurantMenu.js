@@ -1,4 +1,4 @@
-import RestaurantSingleMenu from "./RestaurantSingleMenu";
+import RestaurantAccordianMenu from "./RestaurantAccordianMenu";
 
 const RestaurantMenu = ({ data }) => {
 	const uniqueKeyID = 122111;
@@ -13,7 +13,7 @@ const RestaurantMenu = ({ data }) => {
 	return (
 		<section className="restaurantMenu">
 			{data.map((element) => (
-				<RestaurantSingleMenu data={element} />
+				<RestaurantAccordianMenu menuList={element} />
 			))}
 		</section>
 	);
