@@ -4,8 +4,8 @@ import money from "../../learnings/money.gif";
 import RestaurantCoupounCard from "./RestaurantCoupounCard";
 
 const RestaurantOffer = (props) => {
-	console.log(props);
 	const offerArray = props.data.offers;
+	console.log("from offer", offerArray);
 	const { sla, costForTwoMessage } = props.newData;
 
 	return (
@@ -28,7 +28,7 @@ const RestaurantOffer = (props) => {
 					<p className="text-lg font-semibold">{costForTwoMessage}</p>
 				</section>
 			</section>
-			<section className="coupounCardContainer">
+			<section className="flex space-x-3 overflow-hidden mt-2 mb-10">
 				{offerArray.map((element) => (
 					<RestaurantCoupounCard
 						key={element.info.offerIds[0]}

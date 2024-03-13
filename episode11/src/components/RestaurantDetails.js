@@ -14,7 +14,7 @@ const RestaurantDetails = () => {
 
 	// restaurant information
 	const information = resInfo?.cards[0]?.card?.card?.info;
-
+	console.log(information.name);
 	// restaurant offer
 	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
 
@@ -31,8 +31,8 @@ const RestaurantDetails = () => {
 
 	return (
 		<section className="bg-black w-7/12 border border-purple-300 shadow-md p-5 flex flex-col items-center">
-			<h2 className="text-2xl text-gray-400 font-semibold m-5">
-				Restaurant Page
+			<h2 className="text-2xl text-gray-100 font-semibold m-5 border-b pb-2 border-gray-400">
+				Welcome To {information.name}
 			</h2>
 			<RestaurantInfo data={information} />
 			<RestaurantOffer
