@@ -5,7 +5,7 @@ import RestaurantCoupounCard from "./RestaurantCoupounCard";
 
 const RestaurantOffer = (props) => {
 	const offerArray = props.data.offers;
-	console.log("from offer", offerArray);
+	// console.log("from offer", offerArray);
 	const { sla, costForTwoMessage } = props.newData;
 
 	return (
