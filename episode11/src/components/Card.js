@@ -7,7 +7,7 @@ import CardAddress from "./CardAddress";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
-	console.log("From card", props);
+	// console.log("From card", props);
 	const {
 		name,
 		cloudinaryImageId,

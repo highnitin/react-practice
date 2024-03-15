@@ -20,6 +20,9 @@ export const MENU_API =
 export const imageUrlForCoupon =
 	"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/";
 
+export const imageUrlForSingleMenu =
+	"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+
 export const SHIMMER_CARD_COUNT = [
 	"a1",
 	"a2",
