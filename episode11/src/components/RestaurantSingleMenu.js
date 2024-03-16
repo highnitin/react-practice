@@ -37,11 +37,16 @@ const RestaurantSingleMenu = ({ individualMenuList }) => {
 				<p className="">{description}</p>
 			</section>
 			{imageId ? (
-				<section className="w-3/12 flex items-center justify-center">
-					<img
-						className="object-cover w-32 h-28 rounded-lg"
-						src={imageUrlForSingleMenu + imageId}
-					/>
+				<section className="w-3/12 flex justify-center items-center">
+					<section className="">
+						<img
+							className="object-cover w-32 h-28 rounded-lg"
+							src={imageUrlForSingleMenu + imageId}
+						/>
+						<button className="bg-black border bg-opacity-25 text-white	 font-bold px-3 py-1 rounded-lg relative -top-8 left-1/4 hover:bg-black text-white hover:border-0">
+							Add +
+						</button>
+					</section>
 				</section>
 			) : null}
 		</section>

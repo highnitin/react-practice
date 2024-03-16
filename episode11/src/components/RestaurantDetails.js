@@ -31,7 +31,7 @@ const RestaurantDetails = () => {
 		);
 
 	return (
-		<section className="bg-black w-7/12 border border-purple-300 shadow-md p-5 flex flex-col items-center">
+		<section className="bg-black w-7/12  shadow-md p-5 flex flex-col items-center">
 			<h2 className="text-2xl text-gray-100 font-semibold m-5 border-b pb-2 border-gray-400">
 				Welcome To {information.name}
 			</h2>
