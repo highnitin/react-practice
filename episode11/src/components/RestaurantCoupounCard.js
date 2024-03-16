@@ -14,7 +14,7 @@ const RestaurantCoupounCard = (props) => {
 	return (
 		<section className="flex border border-gray-300 rounded-lg min-w-52 px-2 py-1 justify-start cursor-pointer">
 			{offerTag ? (
-				<p className="vlr text-[10px] text-gray-400 -rotate-180 border-l-[1px] mr-2 text-red-200 text-center">
+				<p className="vlr text-[10px] -rotate-180 border-l-[1px] mr-2 text-red-200 text-center">
 					{offerTag}
 				</p>
 			) : null}

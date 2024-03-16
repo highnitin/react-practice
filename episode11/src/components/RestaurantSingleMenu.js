@@ -43,7 +43,7 @@ const RestaurantSingleMenu = ({ individualMenuList }) => {
 							className="object-cover w-32 h-28 rounded-lg"
 							src={imageUrlForSingleMenu + imageId}
 						/>
-						<button className="bg-black border bg-opacity-25 text-white	 font-bold px-3 py-1 rounded-lg relative -top-8 left-1/4 hover:bg-black text-white ">
+						<button className="bg-black border bg-opacity-25 font-bold px-3 py-1 rounded-lg relative -top-8 left-1/4 hover:bg-black text-white ">
 							Add +
 						</button>
 					</section>
