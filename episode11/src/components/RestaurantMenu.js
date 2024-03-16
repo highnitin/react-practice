@@ -2,7 +2,6 @@ import RestaurantAccordianMenu from "./RestaurantAccordianMenu";
 import { UpdatedRestaurantAccordianMenu } from "./RestaurantAccordianMenu";
 
 const RestaurantMenu = ({ data }) => {
-	console.log("fromRestaurantMenu", data);
 	const RestaurantAccordianMenuWithExtraMenu = UpdatedRestaurantAccordianMenu(
 		RestaurantAccordianMenu
 	);
