@@ -4,7 +4,6 @@ import useNetworkStatus from "../utils/useNetworkStatus";
 import offlineMeme from "../../learnings/offlineMeme.png";
 
 const CardContainer = (props) => {
-	// console.log("cardContainer", props);
 	const networkStatus = useNetworkStatus();
 
 	if (networkStatus === false)

@@ -2,7 +2,6 @@ import { useState } from "react";
 import useRestaurantApiSearch from "../utils/useRestaurantApiSearch";
 
 const SearchSection = ({ onFilter }) => {
-	// console.log("here", onFilter);
 	const restaurantData = useRestaurantApiSearch();
 
 	const [inputValue, setInputValue] = useState("Pizza");

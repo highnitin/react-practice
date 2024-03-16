@@ -1,7 +1,6 @@
 import greenStarIcon from "../../learnings/greenStarIcon.png";
 
 const RestaurantInfo = (props) => {
-	// console.log(props);
 	const {
 		name,
 		cuisines,

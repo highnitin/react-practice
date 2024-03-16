@@ -1,5 +1,4 @@
 const RestaurantCoupounCard = (props) => {
-	// console.log("resCoupon", props);
 	const imageUrlForCoupon =
 		"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_28,h_28/";
 	const { header, couponCode, description, offerLogo, offerTag } =
