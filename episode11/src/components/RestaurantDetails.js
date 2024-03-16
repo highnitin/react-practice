@@ -19,15 +19,46 @@ const RestaurantDetails = () => {
 	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
 
 	// restaurant menu
-	const menuInformation =
-		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
+	// const menuInformation =
+	// 	resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
 
-	const completeMenuInformation =
+	// const completeMenuInformation =
+	// 	resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+	// 		(element) =>
+	// element.card.card["@type"] ==
+	// "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+	// 		element.card.card["@type"] ==
+	// 		"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+	// );
+
+	// console.log("From Restaurant Details", completeMenuInformation);
+
+	const completeMenuInformationWithoutFilter =
 		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
-			(element) =>
-				element.card.card["@type"] ==
-				"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+			(element) => {
+				return (
+					element.card.card["@type"] ===
+					"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+				);
+			}
 		);
+
+	// const completeMenuInformationWithoutFilter =
+	// 	resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+	// 		(element) => {
+	// 			return (
+	// 				element.card.card["@type"] ===
+	// 					"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" ||
+	// 				element.card.card["@type"] ===
+	// 					"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+	// 			);
+	// 		}
+	// 	);
+
+	// console.log(
+	// 	"completeMenuInformationWithoutFilter",
+	// 	completeMenuInformationWithoutFilter
+	// );
 
 	return (
 		<section className="bg-black w-7/12 border border-purple-300 shadow-md p-5 flex flex-col items-center">
@@ -39,7 +70,7 @@ const RestaurantDetails = () => {
 				data={offer}
 				newData={information}
 			/>
-			<RestaurantMenu data={completeMenuInformation} />
+			<RestaurantMenu data={completeMenuInformationWithoutFilter} />
 		</section>
 	);
 };
