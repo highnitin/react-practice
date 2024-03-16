@@ -12,7 +12,10 @@ const RestaurantMenu = ({ data }) => {
 			{data.map((element) =>
 				element.card.card["@type"] ==
 				"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" ? (
-					<RestaurantAccordianMenuWithExtraMenu menuList={element} />
+					<RestaurantAccordianMenuWithExtraMenu
+						key={element.card.card.title + uniqueKeyID}
+						menuList={element}
+					/>
 				) : (
 					<RestaurantAccordianMenu
 						key={element.card.card.title + uniqueKeyID}

@@ -33,27 +33,27 @@ const RestaurantDetails = () => {
 
 	// console.log("From Restaurant Details", completeMenuInformation);
 
-	const completeMenuInformationWithoutFilter =
-		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
-			(element) => {
-				return (
-					element.card.card["@type"] ===
-					"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-				);
-			}
-		);
-
 	// const completeMenuInformationWithoutFilter =
 	// 	resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
 	// 		(element) => {
 	// 			return (
 	// 				element.card.card["@type"] ===
-	// 					"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" ||
-	// 				element.card.card["@type"] ===
-	// 					"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+	// 				"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 	// 			);
 	// 		}
 	// 	);
+
+	const completeMenuInformationWithoutFilter =
+		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+			(element) => {
+				return (
+					element.card.card["@type"] ===
+						"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory" ||
+					element.card.card["@type"] ===
+						"type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+				);
+			}
+		);
 
 	// console.log(
 	// 	"completeMenuInformationWithoutFilter",

@@ -4,14 +4,19 @@ import down from "../../learnings/down.png";
 import upArrow from "../../learnings/upArrow.png";
 
 const RestaurantAccordianMenu = ({ menuList }) => {
-	console.log("outside HOC", menuList);
 	const [showAccordian, setShowAccordian] = useState(true);
 	const accordianClicked = () => {
 		showAccordian ? setShowAccordian(false) : setShowAccordian(true);
 	};
 
-	const { title, itemCards } = menuList.card.card;
-	// console.log("CompleteMenuInformation", itemCards);
+	let title, itemCards;
+
+	if (menuList.itemCards) {
+		({ title, itemCards } = menuList);
+	} else {
+		({ title, itemCards } = menuList.card.card);
+	}
+
 	return (
 		<section className="bg-white p-2 my-4 text-black rounded-sm">
 			<section
@@ -32,7 +37,7 @@ const RestaurantAccordianMenu = ({ menuList }) => {
 					/>
 				)}
 			</section>
-			<section className="p-3">
+			<section className="px-3 py-2">
 				{showAccordian
 					? itemCards.map((element) => (
 							<RestaurantSingleMenu
@@ -48,18 +53,20 @@ const RestaurantAccordianMenu = ({ menuList }) => {
 
 export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
 	return ({ menuList }) => {
-		// console.log("inside HOC", menuList);
-		// const [title] = menuList.card.card;
-		// const categories = menuList.card.card.categories;
-		// console.log(categories);
-		return (
-			<section className="border p-5 m-5 border-pink-500 bg-green-600">
-				<p>{title}</p>
-				<RestaurantAccordianMenu menuList={menuList} />
+		const { title, categories } = menuList.card.card;
 
-				{/* {categories.map((element) => (
-					<RestaurantAccordianMenu menuList={element} />
-				))} */}
+		return (
+			<section className="border mt-3 bg-white rounded-sm">
+				<p className="px-5 pt-5 text-xl font-extrabold text-gray-600">
+					{title}
+				</p>
+
+				{categories.map((element) => (
+					<RestaurantAccordianMenu
+						key={element.title + Math.random() * 1000}
+						menuList={element}
+					/>
+				))}
 			</section>
 		);
 	};

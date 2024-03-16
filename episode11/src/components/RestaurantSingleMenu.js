@@ -4,7 +4,6 @@ import orangeStarIcon from "../../learnings/orangeStarIcon.png";
 import { imageUrlForSingleMenu } from "../utils/constants";
 
 const RestaurantSingleMenu = ({ individualMenuList }) => {
-	// console.log(individualMenuList);
 	const { isVeg, ribbon, name, defaultPrice, price, description, imageId } =
 		individualMenuList.card.info;
 	return (
