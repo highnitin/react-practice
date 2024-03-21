@@ -597,8 +597,51 @@ Good Practice:
 ------------------------------------------------------------------------------------
                                  /* Episode 08 */
 ------------------------------------------------------------------------------------
-
-
+1. ALl about class based components
+2. In the about us page, show the team members card and fetch the data from GitHub
+3. What is the relation between functional component and class based components.
+4. Create a user component using functional component and class based component approach
+5. Functional component is nothing but just a JavaScript function that returns a JSX
+6. What is a class based component? It is a normal JavaScript class
+7. Learn more about JavaScript class
+8. render() - render method returns some piece of JSX
+9. A class based component is a class which extends React.component and it has a render method that returns a piece of JSX
+10. What is React.component? It is a class given by React package
+11. Which means we have to import the class
+12. Import export for class based component is sames as functional component
+13. Why we use constructor and super why do we always have to write super and constructor
+14. We receive the props inside the constructor
+15. Whenever the instance of the class is created a constructor is called all the props what we have passed will be combined together as an object and will be passed
+16. How to create state variables and local variables in class based components?
+17. When we say we rendering a functional component what does that mean?
+18. We are mounting the functional component, loading or invoking the function.
+19. Loading a class based component on the web page? It mean we are creating an instance of the class.
+20. And whenever we create a new instance of a class constructor is called. And constructor is the best place to receive props and this is the best place to create state variable.
+21. The state is a big object that contains all the state variables
+22. How to create multiple state variables in class based components.
+23. Never update the state variables in class based component directly
+24. How to create state variables and local variables in class based components?
+25. When we say we rendering a functional component what does that mean?
+26. We are mounting the functional component, loading or invoking the function. Loading a class based component on the web page? It means we are creating an instance of the class.
+27. And whenever we create a new instance of a class constructor is called. And constructor is the best place to receive props and this is the best place to create state variable.
+28. The state is a big object that contains all the state variables
+29. How to create multiple state variables in class based components. Never update the state variables in class based component directly
+30. This.state = {} state is a reserved keyword, also it is a big object
+31. Whenever state variable is updated, React triggers reconciliation and with the help of diff algorithm it finds the difference and replace the updates and then re-renders the component.
+32. Loading and mounting the component is one and the same
+33. The first thing when a class is loaded the instance is created, the constructor is called and then render method is called.
+34. Learn more about componentDidMount() method
+35. Life cycle of class component - first constructor is called, second render method is called and then componentDidMount() will be count.
+36. React render life cycle diagram Wojtekmaj diagram for React lifecycle methods
+37. Never ever compare React life cycle method to functional component
+38. componentWillUnmount() is not equal to useEffect()
+39. In useEffect() if we don't put dependency array then after each render it will be called.
+40. In componentDidMount() it is only called once, and it will be mounted only once. After every subsequent render it is not mounted it will be updated.
+41. componentDidMount() method
+42. Why we cannot make useEffect() as an async function, why we cannot use async?
+43. In componentDidMount(), it is only called once, and it will be mounted only once. After every subsequent render it is not mounted, it will be updated.
+44. componentDidMount() method is called after the component is mounted to the DOM. It is commonly used for tasks like data fetching or initializing third-party libraries.
+45. Why we cannot make useEffect() as an async function, why we cannot use async?
 ------------------------------------------------------------------------------------
                                  /* Episode 09 */
 ------------------------------------------------------------------------------------
