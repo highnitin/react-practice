@@ -646,6 +646,23 @@ Good Practice:
                                  /* Episode 09 */
 ------------------------------------------------------------------------------------
 
+1. What are custom hooks?
+2. Single responsibility principle according to the principal each component should have a single responsibility.
+3. What is Modularity? It makes the code testable and maintainable, reusable.
+4. Keep your component as light as possible.
+5. How can you create your custom hook?
+6. Hooks are helper functions.
+7. Always create a separate file for different hooks under `utils > hooks`. Naming convention - useHookName.
+8. What is the contract of `restaurantMenu` hook? It will take the `resId` and return the `resInfo`.
+9. How can you add your own npm package?
+10. Whenever you write the custom hooks, first finalize the contract? Meaning what is the input of the hook and what is the output of the hook.
+11. What is linter? A lot of projects use linter, why?
+12. How to make an application with 10000s of components performant?
+13. How large scale applications are made performant?
+14. Go to network > select js > check for JavaScript file size.
+15. Code splitting / chunking / dynamic bundling / lazy loading / on-demand loading / dynamic import - in short break down your app into smaller logical chunks.
+16. Learn more about lazy load, and Suspense.
+17. What is app bloating? Bundle size is increasing?
 
 ------------------------------------------------------------------------------------
                                  /* Episode 10 */
