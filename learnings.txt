@@ -668,6 +668,19 @@ Good Practice:
                                  /* Episode 10 */
 ------------------------------------------------------------------------------------
 
+1. What are different ways to add CSS to our React application?
+2. Traditional way to writing CSS.
+3. Sass vs SCSS.
+4. What is Sass: Syntactically Awesome Style Sheets?
+5. What is SCSS?
+6. What are Styled-components?
+7. Styled components - [https://styled-components.com/](https://styled-components.com/)
+8. Learn more about libraries and frameworks.
+9. Material UI, Bootstrap, Ant Design, Chakra UI, Tailwind.
+10. What is PostCSS?
+11. Make sure we are handling error for null search, no search, API calls after 3 AM.
+12. For Episode 11.
+13. Data is the new oil. What is high-order component? Why do we use it? Where do we use it? How do we use it? High-order component is a function that takes a component and returns a component. It takes a component as an input, enhances the component, adds features to it, and then returns the component. Build a higher-order component for promoted restaurants in Swiggy.
 
 ------------------------------------------------------------------------------------
                                  /* Episode 11 */
