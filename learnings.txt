@@ -686,6 +686,37 @@ Good Practice:
                                  /* Episode 11 */
 ------------------------------------------------------------------------------------
 
+1. for episode 11
+2. Data is the new oil what is high order component? why we use it? where do we use it? how do we use it? high order component is a function that takes a component and returns a component. it takes a component as an input, enhances the component add features to it and then returns the component. build a higher order component for promoted restaurants in swiggy.
+3. what is controlled and uncontrolled components?
+4. lifting the state up
+5. the important feature of a react application is to manage the data
+6. this ui is very static, it doesn't have its logic,
+7. all react application have 2 layers, ui layer and data layer - ui layer is powered by data layer
+8. Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components. In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component.
+9. ```<pre>element.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+element.card.card.title
+Rolls @ 99
+newElement -> element.card.card.categories
+array
+newElement.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.Dish"
+const withNestedItemCategory = (RestaurantMenu) -> {
+return () => {
+return (
+<tag>
+<label>Extra Menu</label>
+<!-- <RestaurantMenu /> -->
+<tag>
+)
+}
+}
+element.card.card["@type"] ==
+"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+if this is true then we will render a new component withNestedItemCategory
+else
+</pre>```
+10. Explore more on React Developer Tool - Extension
+11. Revised HOC and state lifting.
 
 ------------------------------------------------------------------------------------
                                  /* Episode 12 */
