@@ -4,6 +4,7 @@ import money from "../../learnings/money.gif";
 import RestaurantCoupounCard from "./RestaurantCoupounCard";
 
 const RestaurantOffer = (props) => {
+	console.log(props);
 	const offerArray = props.data.offers;
 	const { sla, costForTwoMessage } = props.newData;
 
@@ -19,6 +20,7 @@ const RestaurantOffer = (props) => {
 						{sla.slaString ? sla.slaString : "30 MINS"}
 					</p>
 				</section>
+
 				<section className="flex justify-center items-center space-x-2">
 					<img
 						src={money}

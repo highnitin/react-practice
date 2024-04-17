@@ -13,7 +13,8 @@ const RestaurantDetails = () => {
 	if (resInfo === null) return <ShimmerContainer />;
 
 	// restaurant information
-	const information = resInfo?.cards[0]?.card?.card?.info;
+	const information = resInfo?.cards[2]?.card?.card?.info;
+	console.log("Hello from resetairant details", resInfo);
 
 	// restaurant offer
 	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
