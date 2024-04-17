@@ -524,27 +524,199 @@ button or the complete header component?
                                  /* Episode 07 */
 ------------------------------------------------------------------------------------
 
+1. useEffect Hook
 
+When useEffect is called?
+It is called after every render of the component. Everytime the component renders useEffect is called.
+
+Dependency array changes the behaviour if useEffect hook.
+
+if no dependency array present => useEffect is called on every render
+
+if dependency array is empty [] => useEffect is called on intial render (just once)
+
+The default behaviour of useEffect is to be called again and again if the component renders.
+
+If dependency array is [something] => useEffect is called when [something] is updated.
+
+Remember useEffect is called once on all conditions.
+
+------------------------
+
+2. useState Hook
+
+Never create useState hooks outside the components.
+
+It is used to create local state variable inside your functional component.
+
+Bad Practice:
+
+- Creating useState outside functional component
+
+- Using useState inside conditinal statement, example if(condition){useState}
+
+- Never use it inside for loop
+
+- Don't create your state variables inside functions (functions created inside functional components).
+
+Good Practice:
+
+- Place your useState at the top level of functional component
+
+---------------------
+
+3. Reacter Routers
+
+- use react router dom
+
+- how to install react router dom?
+
+- what is routing configuration?
+
+- create a cofiguration
+
+- render the configuration
+
+- what is createBrowserRouter
+- what is routerProvider
+
+- Explore more on errorElement
+
+- Explore more on useRouteError hook
+
+- Customize your 404 page
+
+- Learn more about children routes
+
+5. Why react applications are called as single page application?
+6. 2 types of routing in web apps - client side routing - server side routing
+7. useParams hook
+8. why do we use outlet
+9. how you can destructure useParams on the fly?
 
 ------------------------------------------------------------------------------------
                                  /* Episode 08 */
 ------------------------------------------------------------------------------------
-
-
+1. ALl about class based components
+2. In the about us page, show the team members card and fetch the data from GitHub
+3. What is the relation between functional component and class based components.
+4. Create a user component using functional component and class based component approach
+5. Functional component is nothing but just a JavaScript function that returns a JSX
+6. What is a class based component? It is a normal JavaScript class
+7. Learn more about JavaScript class
+8. render() - render method returns some piece of JSX
+9. A class based component is a class which extends React.component and it has a render method that returns a piece of JSX
+10. What is React.component? It is a class given by React package
+11. Which means we have to import the class
+12. Import export for class based component is sames as functional component
+13. Why we use constructor and super why do we always have to write super and constructor
+14. We receive the props inside the constructor
+15. Whenever the instance of the class is created a constructor is called all the props what we have passed will be combined together as an object and will be passed
+16. How to create state variables and local variables in class based components?
+17. When we say we rendering a functional component what does that mean?
+18. We are mounting the functional component, loading or invoking the function.
+19. Loading a class based component on the web page? It mean we are creating an instance of the class.
+20. And whenever we create a new instance of a class constructor is called. And constructor is the best place to receive props and this is the best place to create state variable.
+21. The state is a big object that contains all the state variables
+22. How to create multiple state variables in class based components.
+23. Never update the state variables in class based component directly
+24. How to create state variables and local variables in class based components?
+25. When we say we rendering a functional component what does that mean?
+26. We are mounting the functional component, loading or invoking the function. Loading a class based component on the web page? It means we are creating an instance of the class.
+27. And whenever we create a new instance of a class constructor is called. And constructor is the best place to receive props and this is the best place to create state variable.
+28. The state is a big object that contains all the state variables
+29. How to create multiple state variables in class based components. Never update the state variables in class based component directly
+30. This.state = {} state is a reserved keyword, also it is a big object
+31. Whenever state variable is updated, React triggers reconciliation and with the help of diff algorithm it finds the difference and replace the updates and then re-renders the component.
+32. Loading and mounting the component is one and the same
+33. The first thing when a class is loaded the instance is created, the constructor is called and then render method is called.
+34. Learn more about componentDidMount() method
+35. Life cycle of class component - first constructor is called, second render method is called and then componentDidMount() will be count.
+36. React render life cycle diagram Wojtekmaj diagram for React lifecycle methods
+37. Never ever compare React life cycle method to functional component
+38. componentWillUnmount() is not equal to useEffect()
+39. In useEffect() if we don't put dependency array then after each render it will be called.
+40. In componentDidMount() it is only called once, and it will be mounted only once. After every subsequent render it is not mounted it will be updated.
+41. componentDidMount() method
+42. Why we cannot make useEffect() as an async function, why we cannot use async?
+43. In componentDidMount(), it is only called once, and it will be mounted only once. After every subsequent render it is not mounted, it will be updated.
+44. componentDidMount() method is called after the component is mounted to the DOM. It is commonly used for tasks like data fetching or initializing third-party libraries.
+45. Why we cannot make useEffect() as an async function, why we cannot use async?
 ------------------------------------------------------------------------------------
                                  /* Episode 09 */
 ------------------------------------------------------------------------------------
 
+1. What are custom hooks?
+2. Single responsibility principle according to the principal each component should have a single responsibility.
+3. What is Modularity? It makes the code testable and maintainable, reusable.
+4. Keep your component as light as possible.
+5. How can you create your custom hook?
+6. Hooks are helper functions.
+7. Always create a separate file for different hooks under `utils > hooks`. Naming convention - useHookName.
+8. What is the contract of `restaurantMenu` hook? It will take the `resId` and return the `resInfo`.
+9. How can you add your own npm package?
+10. Whenever you write the custom hooks, first finalize the contract? Meaning what is the input of the hook and what is the output of the hook.
+11. What is linter? A lot of projects use linter, why?
+12. How to make an application with 10000s of components performant?
+13. How large scale applications are made performant?
+14. Go to network > select js > check for JavaScript file size.
+15. Code splitting / chunking / dynamic bundling / lazy loading / on-demand loading / dynamic import - in short break down your app into smaller logical chunks.
+16. Learn more about lazy load, and Suspense.
+17. What is app bloating? Bundle size is increasing?
 
 ------------------------------------------------------------------------------------
                                  /* Episode 10 */
 ------------------------------------------------------------------------------------
 
+1. What are different ways to add CSS to our React application?
+2. Traditional way to writing CSS.
+3. Sass vs SCSS.
+4. What is Sass: Syntactically Awesome Style Sheets?
+5. What is SCSS?
+6. What are Styled-components?
+7. Styled components - [https://styled-components.com/](https://styled-components.com/)
+8. Learn more about libraries and frameworks.
+9. Material UI, Bootstrap, Ant Design, Chakra UI, Tailwind.
+10. What is PostCSS?
+11. Make sure we are handling error for null search, no search, API calls after 3 AM.
+12. For Episode 11.
+13. Data is the new oil. What is high-order component? Why do we use it? Where do we use it? How do we use it? High-order component is a function that takes a component and returns a component. It takes a component as an input, enhances the component, adds features to it, and then returns the component. Build a higher-order component for promoted restaurants in Swiggy.
 
 ------------------------------------------------------------------------------------
                                  /* Episode 11 */
 ------------------------------------------------------------------------------------
 
+1. for episode 11
+2. Data is the new oil what is high order component? why we use it? where do we use it? how do we use it? high order component is a function that takes a component and returns a component. it takes a component as an input, enhances the component add features to it and then returns the component. build a higher order component for promoted restaurants in swiggy.
+3. what is controlled and uncontrolled components?
+4. lifting the state up
+5. the important feature of a react application is to manage the data
+6. this ui is very static, it doesn't have its logic,
+7. all react application have 2 layers, ui layer and data layer - ui layer is powered by data layer
+8. Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components. In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component.
+9. ```<pre>element.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+element.card.card.title
+Rolls @ 99
+newElement -> element.card.card.categories
+array
+newElement.card.card["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.Dish"
+const withNestedItemCategory = (RestaurantMenu) -> {
+return () => {
+return (
+<tag>
+<label>Extra Menu</label>
+<!-- <RestaurantMenu /> -->
+<tag>
+)
+}
+}
+element.card.card["@type"] ==
+"type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+if this is true then we will render a new component withNestedItemCategory
+else
+</pre>```
+10. Explore more on React Developer Tool - Extension
+11. Revised HOC and state lifting.
 
 ------------------------------------------------------------------------------------
                                  /* Episode 12 */
