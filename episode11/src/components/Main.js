@@ -6,9 +6,9 @@ import useRestaurantApi from "../utils/useRestaurantApi";
 
 const Main = () => {
 	const restaurantInfo = useRestaurantApi();
-	console.log("Hello from Main", restaurantInfo);
+	// console.log("Hello from Main", restaurantInfo);
+
 	const [newRestaurantInfo, setNewRestaurantInfo] = useState();
-	// console.log(newRestaurantInfo);
 	const handleFilter = (restaurants) => {
 		setNewRestaurantInfo({ restaurants });
 	};
