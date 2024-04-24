@@ -2,6 +2,7 @@ import RestaurantAccordianMenu from "./RestaurantAccordianMenu";
 import { UpdatedRestaurantAccordianMenu } from "./RestaurantAccordianMenu";
 
 const RestaurantMenu = ({ data }) => {
+	// console.log("restaurant menu", data);
 	const RestaurantAccordianMenuWithExtraMenu = UpdatedRestaurantAccordianMenu(
 		RestaurantAccordianMenu
 	);

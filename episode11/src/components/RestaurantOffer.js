@@ -4,7 +4,8 @@ import money from "../../learnings/money.gif";
 import RestaurantCoupounCard from "./RestaurantCoupounCard";
 
 const RestaurantOffer = (props) => {
-	console.log(props);
+	// console.log(props);
+	// console.log("Hello from resoffer.js", props);
 	const offerArray = props.data.offers;
 	const { sla, costForTwoMessage } = props.newData;
 

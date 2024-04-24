@@ -14,13 +14,14 @@ const RestaurantDetails = () => {
 
 	// restaurant information
 	const information = resInfo?.cards[2]?.card?.card?.info;
-	console.log("Hello from resetairant details", resInfo);
+	// console.log("Hello from resetairant details", resInfo);
 
 	// restaurant offer
-	const offer = resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle;
+	const offer = resInfo?.cards[3]?.card?.card?.gridElements?.infoWithStyle;
+	// console.log("Hello from resDetails", resInfo);
 
 	const completeMenuInformationWithoutFilter =
-		resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+		resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
 			(element) => {
 				return (
 					element.card.card["@type"] ===

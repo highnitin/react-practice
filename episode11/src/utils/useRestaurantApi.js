@@ -12,8 +12,13 @@ const useRestaurantApi = () => {
 		const fetchData = await fetch(RES_API);
 		const response = await fetchData.json();
 		// console.log("response", response.data.cards);
+		// console.log(
+		// 	"Hello from useRestaurantAPI",
+		// 	response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+		// 		?.restaurants
+		// );
 		setFilteredRestaurantList(
-			response?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+			response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
 		);
 	};
 	// console.log("filteredRestaurantList", filteredRestaurantList);
