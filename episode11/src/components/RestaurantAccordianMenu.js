@@ -3,10 +3,9 @@ import RestaurantSingleMenu from "./RestaurantSingleMenu";
 import down from "../../learnings/down.png";
 import upArrow from "../../learnings/upArrow.png";
 
-const RestaurantAccordianMenu = ({ menuList }) => {
-	const [showAccordian, setShowAccordian] = useState(true);
+const RestaurantAccordianMenu = ({ menuList, showAccordian, setShowIndex }) => {
 	const accordianClicked = () => {
-		showAccordian ? setShowAccordian(false) : setShowAccordian(true);
+		setShowIndex();
 	};
 
 	let title, itemCards;
@@ -52,7 +51,9 @@ const RestaurantAccordianMenu = ({ menuList }) => {
 };
 
 export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
+	console.log("From resaccordian menu", RestaurantAccordianMenu);
 	return ({ menuList }) => {
+		const [showIndex, setShowIndex] = useState(0);
 		const { title, categories } = menuList.card.card;
 
 		return (
@@ -61,10 +62,12 @@ export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
 					{title}
 				</p>
 
-				{categories.map((element) => (
+				{categories.map((element, index) => (
 					<RestaurantAccordianMenu
 						key={element.title + Math.random() * 1000}
 						menuList={element}
+						showAccordian={index == showIndex ? true : false}
+						setShowIndex={() => setShowIndex(index)}
 					/>
 				))}
 			</section>
