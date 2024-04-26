@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { Children, useState } from "react";
 import RestaurantSingleMenu from "./RestaurantSingleMenu";
 import down from "../../learnings/down.png";
 import upArrow from "../../learnings/upArrow.png";
 
 const RestaurantAccordianMenu = ({ menuList, showAccordian, setShowIndex }) => {
+	// const [showAccordian, setShowAccordian] = useState(false);
 	const accordianClicked = () => {
+		console.log(showAccordian);
 		setShowIndex();
+		// showAccordian ? setShowAccordian(false) : setShowAccordian(true);
+		// showAccordian={index == showIndex ? true : false}
 	};
 
 	let title, itemCards;
@@ -51,9 +55,9 @@ const RestaurantAccordianMenu = ({ menuList, showAccordian, setShowIndex }) => {
 };
 
 export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
-	console.log("From resaccordian menu", RestaurantAccordianMenu);
+	// console.log("From resaccordian menu", RestaurantAccordianMenu);
 	return ({ menuList }) => {
-		const [showIndex, setShowIndex] = useState(0);
+		const [showIndex, setShowIndex] = useState(null);
 		const { title, categories } = menuList.card.card;
 
 		return (
