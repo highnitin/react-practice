@@ -53,7 +53,7 @@ const RestaurantAccordianMenu = ({ menuList, showAccordian, setShowIndex }) => {
 export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
 	console.log("From resaccordian menu", RestaurantAccordianMenu);
 	return ({ menuList }) => {
-		const [showIndexx, setShowIndexx] = useState(0);
+		const [showIndex, setShowIndex] = useState(0);
 		const { title, categories } = menuList.card.card;
 
 		return (
@@ -66,8 +66,8 @@ export const UpdatedRestaurantAccordianMenu = (RestaurantAccordianMenu) => {
 					<RestaurantAccordianMenu
 						key={element.title + Math.random() * 1000}
 						menuList={element}
-						showAccordian={index == showIndexx ? true : false}
-						setShowIndexx={() => setShowIndexx(index)}
+						showAccordian={index == showIndex ? true : false}
+						setShowIndex={() => setShowIndex(index)}
 					/>
 				))}
 			</section>
